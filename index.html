@@ -1,0 +1,1707 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solenture &mdash; The Benefits of Innovative Thinking&reg;</title>
+<meta name="description" content="Solenture guides privately-held businesses to maximize value and converts that value into lasting personal wealth. 60+ years of experience. Pittsburgh, PA.">
+<meta property="og:title" content="Solenture — The Benefits of Innovative Thinking®">
+<meta property="og:description" content="Business consulting, total rewards, and wealth management. Since 1965.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   SOLENTURE — "Quiet Authority" Design System
+   Enhances current site feel. White + navy + blue.
+   ═══════════════════════════════════════════════ */
+:root {
+  --white: #FFFFFF;
+  --off-white: #F3F5F8;
+  --light-gray: #E3E8ED;
+  --mid-gray: #9799A3;
+  --dark-gray: #5A5D66;
+  --charcoal: #374151;
+  --navy: #1E2E3F;
+  --navy-deep: #152231;
+  --indigo: #0075BB;
+  --indigo-light: #C1E2F8;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--dark-gray);background:var(--white);font-size:16px;line-height:1.7;font-weight:400;overflow-x:hidden}
+a{text-decoration:none;color:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+button{border:none;background:none;cursor:pointer;font-family:inherit}
+::selection{background:rgba(0,117,187,0.12)}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:80px;display:flex;align-items:center;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:box-shadow 0.4s}
+nav.scrolled{box-shadow:0 1px 0 var(--light-gray)}
+.nav-inner{width:100%;max-width:1280px;margin:0 auto;padding:0 56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--sans);font-size:18px;font-weight:600;color:var(--navy);letter-spacing:1px;cursor:pointer}
+.nav-logo-img{height:28px;cursor:pointer}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:400;color:var(--dark-gray);transition:color 0.2s;letter-spacing:0.2px}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-cta{font-size:13px!important;font-weight:500!important;color:var(--white)!important;background:var(--indigo);padding:10px 24px;border-radius:4px;transition:background 0.2s,transform 0.15s}
+.nav-cta:hover{background:#006AAA;transform:translateY(-1px)}
+.hamburger{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.hamburger span,.hamburger span::before,.hamburger span::after{display:block;width:20px;height:1.5px;background:var(--navy);transition:all 0.3s}
+.hamburger span{position:relative}
+.hamburger span::before{content:'';position:absolute;top:-6px}
+.hamburger span::after{content:'';position:absolute;top:6px}
+.hamburger.open span{background:transparent}
+.hamburger.open span::before{transform:translateY(6px) rotate(45deg)}
+.hamburger.open span::after{transform:translateY(-6px) rotate(-45deg)}
+.mobile-overlay{position:fixed;inset:0;z-index:999;background:var(--white);display:none;flex-direction:column;justify-content:center;align-items:center;gap:20px;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.mobile-overlay.visible{opacity:1;pointer-events:all}
+.mobile-overlay a{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--navy)}
+
+/* ── PAGE SYSTEM ── */
+.page{display:none}.page.active{display:block}
+
+/* ── HERO (Home) ── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg video{width:100%;height:100%;object-fit:cover;opacity:0.35}
+.hero-bg .hero-poster{position:absolute;inset:0;background:url('hero-poster.jpg') center/cover;opacity:0.35;transition:opacity 0.5s}
+.hero-bg.video-loaded .hero-poster{opacity:0}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(30,46,63,0.7) 0%,rgba(30,46,63,0.3) 40%,rgba(30,46,63,0.5) 70%,rgba(30,46,63,0.85) 100%)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:120px 56px 180px}
+@media(max-height:700px){.hero{min-height:700px}}
+.hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s 0.3s forwards}
+.hero h1{font-family:var(--serif);font-size:clamp(36px,5vw,72px);font-weight:400;color:var(--white);line-height:1.12;letter-spacing:-0.02em;max-width:800px;margin-bottom:24px;opacity:0;animation:fadeUp 0.8s 0.5s forwards}
+.hero-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,0.55);max-width:520px;line-height:1.75;margin-bottom:44px;opacity:0;animation:fadeUp 0.8s 0.7s forwards}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.8s 0.9s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--white);background:var(--indigo);padding:14px 32px;border-radius:4px;transition:background 0.2s,transform 0.15s}
+.btn-primary:hover{background:#006AAA;transform:translateY(-1px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:rgba(255,255,255,0.7);padding:14px 32px;border-radius:4px;border:1px solid rgba(255,255,255,0.2);transition:color 0.2s,border-color 0.2s}
+.btn-ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.5)}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+.hero-eyebrow,.hero h1,.hero-sub,.hero-btns{transform:translateY(20px)}
+
+/* Stats Bar */
+.hero-stats{position:absolute;bottom:0;left:0;right:0;z-index:3;border-top:1px solid rgba(255,255,255,0.08);background:rgba(30,46,63,0.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-stats-inner{max-width:1280px;margin:0 auto;padding:0 56px;display:flex}
+.h-stat{flex:1;padding:28px 0;border-right:1px solid rgba(255,255,255,0.06);text-align:center}
+.h-stat:last-child{border:none}
+.h-stat-num{font-family:var(--serif);font-size:32px;font-weight:400;color:var(--white);letter-spacing:-0.02em}
+.h-stat-label{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px}
+
+/* ── SECTIONS ── */
+.s{padding:160px 56px}
+.s-alt{background:var(--off-white)}
+.s-navy{background:var(--navy)}
+.s-inner{max-width:1280px;margin:0 auto}
+.s-label{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--indigo);margin-bottom:16px}
+.s-title{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:400;color:var(--navy);line-height:1.2;letter-spacing:-0.01em;margin-bottom:20px}
+.s-desc{font-size:16px;line-height:1.8;color:var(--dark-gray);font-weight:300;max-width:600px}
+.s-rule{width:48px;height:1px;background:var(--indigo);margin:20px 0}
+
+/* ── MISSION BAND ── */
+.mission-band{background:var(--indigo);padding:100px 56px;text-align:center}
+.mission-band .s-label{color:rgba(255,255,255,0.5)}
+.mission-quote{font-family:var(--serif);font-size:clamp(20px,2.5vw,28px);font-weight:400;font-style:italic;color:var(--white);line-height:1.5;max-width:800px;margin:0 auto}
+
+/* ── SERVICE CARDS ── */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--light-gray);margin-top:56px;border:1px solid var(--light-gray)}
+.svc-card{background:var(--white);padding:48px 40px;position:relative;cursor:pointer;transition:background 0.3s}
+.svc-card::after{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--indigo);transition:height 0.4s}
+.svc-card:hover::after{height:100%}
+.svc-card:hover{background:var(--off-white);box-shadow:0 4px 24px rgba(0,0,0,0.04)}
+.svc-card h3{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--navy);margin-bottom:16px}
+.svc-card p{font-size:15px;line-height:1.7;color:var(--dark-gray);font-weight:300;margin-bottom:20px}
+.svc-card ul{list-style:none;margin-bottom:24px}
+.svc-card ul li{font-size:13px;color:var(--mid-gray);padding:4px 0 4px 16px;position:relative}
+.svc-card ul li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:1px;background:var(--indigo)}
+.svc-link{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--indigo);display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s}
+.svc-card:hover .svc-link{gap:10px}
+
+/* ── WHO WE SERVE ── */
+.serve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:64px;margin-top:72px}
+.serve-item .serve-num{font-family:var(--serif);font-size:36px;font-weight:400;color:var(--light-gray);margin-bottom:16px}
+.serve-item h4{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--navy);margin-bottom:12px}
+.serve-item p{font-size:15px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+
+/* ── PROCESS STRIP ── */
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:72px;position:relative}
+.process-steps::before{content:'';position:absolute;top:20px;left:10%;right:10%;height:1px;background:rgba(255,255,255,0.1)}
+.p-step{text-align:center;position:relative}
+.p-step .step-dot{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:var(--serif);font-size:16px;color:var(--white);background:var(--navy);position:relative;z-index:1;transition:border-color 0.3s}
+.p-step:hover .step-dot{border-color:var(--indigo)}
+.p-step h4{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);margin-bottom:8px}
+.p-step p{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.4);font-weight:300;padding:0 8px}
+
+/* ── CTA SECTION ── */
+.cta-section{background:var(--off-white);padding:140px 56px}
+.cta-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.cta-info .s-title{max-width:400px}
+.cta-contact-item{display:flex;gap:12px;align-items:center;padding:12px 0;font-size:15px;color:var(--charcoal)}
+.cta-contact-item svg{width:18px;height:18px;stroke:var(--indigo);fill:none;stroke-width:1.5;flex-shrink:0}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--mid-gray);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1px solid var(--light-gray);border-radius:4px;font-family:inherit;font-size:14px;color:var(--navy);background:var(--white);transition:border-color 0.2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--indigo)}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-submit{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--white);background:var(--indigo);padding:14px 32px;border-radius:4px;transition:background 0.2s,transform 0.15s;margin-top:4px}
+.form-submit:hover{background:#006AAA;transform:translateY(-1px)}
+
+/* ── PAGE HERO (inner pages) ── */
+.page-hero{padding:140px 56px 80px;background:var(--off-white)}
+.page-hero .s-title{max-width:640px}
+
+/* ── ABOUT PAGE ── */
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.pull-quote{padding:24px 0 24px 24px;border-left:3px solid var(--indigo);font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.6;color:var(--navy);font-weight:400;margin:32px 0}
+.advisors-note{background:var(--indigo-light);border-radius:6px;padding:32px 40px;margin-top:32px}
+.advisors-note h4{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--navy);margin-bottom:8px}
+.advisors-note p{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+.timeline{position:relative;margin-top:72px;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:4px;top:0;bottom:0;width:1px;background:var(--light-gray)}
+.tl-item{position:relative;padding:0 0 48px 40px}
+.tl-item::before{content:'';position:absolute;left:-32px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--white);border:2px solid var(--indigo)}
+.tl-item .tl-year{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--navy);margin-bottom:4px}
+.tl-item .tl-era{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--indigo);margin-bottom:8px}
+.tl-item p{font-size:15px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+
+/* ── SERVICE DETAIL (Consulting, TR, WM pages) ── */
+.svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.svc-detail h3{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--navy);margin-bottom:16px}
+.svc-detail p{font-size:15px;line-height:1.8;color:var(--dark-gray);font-weight:300;margin-bottom:12px}
+.svc-list{list-style:none;margin-top:20px}
+.svc-list li{padding:10px 0 10px 20px;position:relative;font-size:14px;color:var(--charcoal);border-bottom:1px solid var(--light-gray)}
+.svc-list li::before{content:'';position:absolute;left:0;top:50%;width:8px;height:1px;background:var(--indigo)}
+.svc-list li:last-child{border:none}
+.cross-note{background:var(--indigo-light);border-radius:4px;padding:20px 24px;margin-top:24px;font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+
+/* Tab system for Consulting page */
+.tab-nav{display:flex;gap:0;border-bottom:1px solid var(--light-gray);margin-bottom:48px}
+.tab-btn{padding:16px 32px;font-size:14px;font-weight:500;color:var(--mid-gray);border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;cursor:pointer;background:none;font-family:var(--sans)}
+.tab-btn.active{color:var(--navy);border-bottom-color:var(--indigo)}
+.tab-btn:hover{color:var(--navy)}
+.tab-content{display:none}.tab-content.active{display:block}
+
+/* ── TEAM ── */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:72px}
+.team-card{cursor:pointer}
+.team-photo-wrap{overflow:hidden;border-radius:4px;aspect-ratio:3/4;background:var(--light-gray)}
+.team-photo{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:filter 0.4s,transform 0.5s}
+.team-card:hover .team-photo{filter:grayscale(0%);transform:scale(1.03)}
+.team-card .t-name{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--navy);margin-top:16px}
+.team-card .t-title{font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--mid-gray);margin-top:4px}
+.support-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px}
+.support-name{font-size:14px;color:var(--charcoal);padding:12px 0;border-bottom:1px solid var(--light-gray)}
+
+/* Team Modal */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;padding:40px}
+.modal-bg.open{opacity:1;pointer-events:all}
+.modal{background:var(--white);max-width:680px;width:100%;border-radius:8px;max-height:85vh;overflow-y:auto;padding:48px;transform:translateY(16px);transition:transform 0.3s}
+.modal-bg.open .modal{transform:translateY(0)}
+.modal-close{position:absolute;top:16px;right:20px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--mid-gray);border-radius:50%;transition:background 0.2s}
+.modal-close:hover{background:var(--off-white)}
+.modal-header{display:flex;gap:24px;align-items:center;margin-bottom:24px}
+.modal-img{width:100px;height:100px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.modal-name{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--navy)}
+.modal-role{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--indigo);margin-top:4px}
+.modal-bio{font-size:15px;line-height:1.8;color:var(--dark-gray);font-weight:300}
+.modal-bio p{margin-bottom:14px}
+
+/* ── CONTACT PAGE ── */
+.contact-split{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 80px)}
+.contact-left{background:var(--navy);position:relative;overflow:hidden;padding:140px 56px 80px;display:flex;flex-direction:column;justify-content:center}
+.contact-left .s-label{color:var(--indigo)}
+.contact-left h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,40px);font-weight:400;color:var(--white);margin-bottom:20px;line-height:1.2}
+.contact-left p{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.5);font-weight:300;max-width:380px;margin-bottom:40px}
+.c-item{padding:14px 0;display:flex;gap:12px;align-items:flex-start}
+.c-item .c-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.c-item .c-value{font-size:15px;color:var(--white);font-weight:400;line-height:1.5}
+.c-item .c-value a{color:var(--white)}
+.c-item svg{width:16px;height:16px;stroke:var(--indigo);fill:none;stroke-width:1.5;flex-shrink:0;margin-top:2px}
+.contact-right{padding:140px 56px 80px;display:flex;flex-direction:column;justify-content:center}
+.contact-right h3{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--navy);margin-bottom:8px}
+.contact-right>p{font-size:14px;color:var(--dark-gray);font-weight:300;margin-bottom:32px}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-deep);padding:96px 56px 48px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.footer-brand{font-size:16px;font-weight:600;color:white;letter-spacing:0.5px;margin-bottom:12px}
+.footer-tagline{font-size:13px;line-height:1.7;color:rgba(255,255,255,0.35);font-weight:300;max-width:300px}
+.footer-col h5{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:16px}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.35);font-weight:300;padding:5px 0;transition:color 0.2s}
+.footer-col a:hover{color:var(--white)}
+.footer-legal{padding-top:28px;font-size:10px;line-height:1.7;color:rgba(255,255,255,0.18);max-width:880px}
+.footer-legal a{color:rgba(255,255,255,0.3);text-decoration:underline}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:11px;color:rgba(255,255,255,0.18)}
+
+/* ── PARTNER LOGOS ── */
+.partners{padding:56px;border-top:1px solid var(--light-gray);border-bottom:1px solid var(--light-gray)}
+.partners-inner{max-width:1280px;margin:0 auto;text-align:center}
+.partners-label{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--mid-gray);margin-bottom:32px}
+.partners-logos{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.partners-logos img{height:36px;width:auto;filter:grayscale(100%);opacity:0.45;transition:opacity 0.3s,filter 0.3s}
+.partners-logos img:hover{filter:grayscale(0%);opacity:0.85}
+
+/* ── SCROLL REVEAL ── */
+.rv{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.rv-d1{transition-delay:0.1s}.rv-d2{transition-delay:0.2s}.rv-d3{transition-delay:0.3s}.rv-d4{transition-delay:0.4s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .svc-grid{grid-template-columns:1fr 1fr}.serve-grid{grid-template-columns:1fr}
+  .about-split,.svc-detail,.cta-inner{grid-template-columns:1fr;gap:48px}
+  .process-steps{grid-template-columns:repeat(3,1fr);gap:24px}
+  .process-steps::before{display:none}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .support-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}.mobile-overlay{display:flex}
+  .s{padding:100px 24px}.page-hero{padding:140px 24px 72px}.cta-section{padding:100px 24px}
+  .nav-inner{padding:0 24px}
+  .hero-content{padding:0 24px 140px}
+  .hero-stats-inner{padding:0 16px}
+  .h-stat{padding:20px 0}
+  .h-stat-num{font-size:24px}
+  .h-stat-label{font-size:9px;letter-spacing:1.5px}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .support-grid{grid-template-columns:1fr 1fr}
+  .contact-split{grid-template-columns:1fr}
+  .contact-left,.contact-right{padding:100px 24px 56px}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+  .form-row{grid-template-columns:1fr}
+  .tab-nav{overflow-x:auto}
+  .tab-btn{white-space:nowrap;padding:12px 20px;font-size:13px}
+  .modal{padding:28px}
+  .modal-header{flex-direction:column;text-align:center}
+  .footer-bottom{flex-direction:column;gap:6px;text-align:center}
+}
+
+/* ── PHOTO BANDS ── */
+.photo-band{position:relative;height:400px;overflow:hidden}
+.photo-band img{width:100%;height:100%;object-fit:cover;filter:brightness(0.85) saturate(0.9)}
+.photo-band-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--navy) 0%,rgba(30,46,63,0.4) 50%,transparent 100%);display:flex;align-items:center;padding:0 56px}
+.photo-band-content{max-width:480px}
+.photo-band-content .s-label{color:var(--indigo)}
+.photo-band-content h3{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--white);line-height:1.3;margin-bottom:12px}
+.photo-band-content p{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.7}
+
+/* ── SPLIT IMAGE SECTIONS ── */
+.split-img{display:grid;grid-template-columns:1fr 1fr;min-height:500px}
+.split-img-photo{overflow:hidden}
+.split-img-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(0.9)}
+.split-img-text{padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
+
+/* ── ANIMATED RULE ── */
+.s-rule{width:0;height:1px;background:var(--indigo);transition:width 0.8s cubic-bezier(0.16,1,0.3,1);margin:20px 0}
+.rv.vis .s-rule,.s-rule.vis{width:56px}
+
+/* ── STAT COUNTER REFINEMENT ── */
+.h-stat-num{opacity:0;transform:translateY(8px);transition:opacity 0.6s,transform 0.6s}
+.h-stat-num.counted{opacity:1;transform:translateY(0)}
+
+/* Hero z-index fix for content above overlay */
+.hero-content{z-index:2}
+.hero-stats{z-index:3}
+
+/* ── PULL QUOTE ENHANCEMENT ── */
+.pull-quote{font-size:22px;letter-spacing:-0.01em}
+
+/* ── NAV DROPDOWN ── */
+.nav-item-drop{position:relative}
+.nav-item-drop::after{content:'';position:absolute;top:100%;left:-20px;right:-20px;height:28px}
+.nav-drop-trigger{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px;font-weight:400;color:var(--dark-gray);transition:color 0.2s;letter-spacing:0.2px}
+.nav-drop-trigger svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2;transition:transform 0.2s}
+.nav-drop-trigger:hover,.nav-drop-trigger.active{color:var(--navy)}
+.nav-dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(0);min-width:220px;background:var(--white);border-radius:6px;box-shadow:0 12px 40px rgba(20,30,45,0.12);padding:10px;opacity:0;pointer-events:none;transition:opacity 0.2s,transform 0.2s;border:1px solid var(--light-gray);margin-top:28px}
+.nav-item-drop:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0)}
+.nav-dropdown a{display:block;padding:10px 14px;font-size:13px;border-radius:4px;color:var(--dark-gray);transition:background 0.15s,color 0.15s}
+.nav-dropdown a:hover{background:var(--off-white);color:var(--navy)}
+
+/* ── REEDMARK THEME (page-reedmark scoped) ── */
+#page-reedmark{--rm-blue:#005D8C;--rm-blue-light:#E3EEF4}
+#page-reedmark .s-label{color:var(--rm-blue)}
+#page-reedmark .s-rule{background:var(--rm-blue)}
+#page-reedmark .pull-quote{border-left-color:var(--rm-blue)}
+#page-reedmark .svc-list li::before{background:var(--rm-blue)}
+#page-reedmark .cross-note{background:var(--rm-blue-light)}
+#page-reedmark .advisors-note{background:var(--rm-blue-light)}
+#page-reedmark .tl-item::before{border-color:var(--rm-blue)}
+#page-reedmark .tl-item .tl-year{color:var(--rm-blue)}
+#page-reedmark .tl-item .tl-era{color:var(--rm-blue)}
+#page-reedmark .photo-band-content .s-label{color:var(--rm-blue)}
+#page-reedmark .form-submit,#page-reedmark .btn-primary{background:var(--rm-blue)}
+#page-reedmark .form-submit:hover,#page-reedmark .btn-primary:hover{background:#004A70}
+#page-reedmark .form-group input:focus,#page-reedmark .form-group select:focus,#page-reedmark .form-group textarea:focus{border-color:var(--rm-blue)}
+#page-reedmark .cta-contact-item svg{stroke:var(--rm-blue)}
+#page-reedmark .c-item svg{stroke:var(--rm-blue)}
+#page-reedmark .serve-item .serve-num{color:var(--rm-blue-light)}
+#page-reedmark .split-img-text .s-label{color:var(--rm-blue)}
+#page-reedmark .split-img-text[style*="navy"] .s-label{color:#6EC1E4}
+.rm-logo-wrap{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.rm-logo-wrap img{height:46px}
+.rm-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--rm-blue);background:var(--rm-blue-light);padding:8px 16px;border-radius:20px;margin-bottom:20px}
+.rm-badge svg{width:12px;height:12px}
+.founder-section{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;background:var(--rm-blue-light);border-radius:8px;padding:48px;margin-top:24px}
+.founder-photo{width:140px;height:140px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--white)}
+.founder-quote{font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.6;color:var(--navy);margin-bottom:16px}
+.founder-attribution{font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--rm-blue)}
+.founder-context{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300;margin-top:20px}
+@media(max-width:768px){.founder-section{grid-template-columns:1fr;text-align:center;padding:32px 24px}.founder-photo{margin:0 auto}}
+
+.s-navy::after{content:'';position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.s-navy{position:relative}
+
+/* ── TEAM CARD HOVER LIFT ── */
+.team-card:hover{transform:translateY(-4px);transition:transform 0.3s}
+.team-card{transition:transform 0.3s}
+
+/* ── SERVE ITEM HOVER ── */
+.serve-item{padding:32px;border-radius:4px;transition:background 0.3s}
+.serve-item:hover{background:var(--white);box-shadow:0 2px 16px rgba(0,0,0,0.04)}
+
+/* ── RESPONSIVE PHOTO BANDS ── */
+@media(max-width:768px){
+.photo-band{height:300px}
+.photo-band-overlay{padding:0 24px}
+.split-img{grid-template-columns:1fr}
+.split-img-photo{height:280px}
+.split-img-text{padding:48px 24px}
+}
+
+/* ── PAGE HERO PHOTO BACKGROUNDS ── */
+.page-hero{position:relative;overflow:hidden}
+.page-hero-img{position:absolute;inset:0;z-index:0}
+.page-hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.35) saturate(0.7)}
+.page-hero-content{position:relative;z-index:1}
+
+/* ── BROKERAGE PAGE STYLES ── */
+.phase-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--light-gray);margin-top:48px}
+.phase-step{background:var(--white);padding:40px 32px;position:relative}
+.phase-step:hover{background:var(--off-white)}
+.phase-num{font-family:var(--serif);font-size:11px;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--indigo);margin-bottom:12px}
+.phase-step h4{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--navy);margin-bottom:10px}
+.phase-step p{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--light-gray);margin-top:48px}
+.diff-card{background:var(--white);padding:40px 36px}
+.diff-card.highlight{background:var(--navy)}
+.diff-card.highlight h4,.diff-card.highlight p,.diff-card.highlight li{color:rgba(255,255,255,0.85)}
+.diff-card.highlight .s-label{color:var(--indigo)}
+.diff-card h4{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--navy);margin-bottom:12px}
+.diff-card p{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300;margin-bottom:16px}
+.diff-card ul{list-style:none}
+.diff-card ul li{font-size:13px;color:var(--mid-gray);padding:6px 0 6px 16px;position:relative;border-bottom:1px solid var(--light-gray)}
+.diff-card.highlight ul li{border-bottom-color:rgba(255,255,255,0.1)}
+.diff-card ul li::before{content:'';position:absolute;left:0;top:14px;width:6px;height:1px;background:var(--indigo)}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+.case-card{background:var(--off-white);border-radius:4px;padding:40px 32px;position:relative;overflow:hidden}
+.case-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--indigo)}
+.case-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--indigo);margin-bottom:8px}
+.case-card h4{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--navy);margin-bottom:12px}
+.case-card p{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+.case-placeholder{font-size:12px;color:var(--mid-gray);font-style:italic;margin-top:12px;padding-top:12px;border-top:1px solid var(--light-gray)}
+
+/* ── ASSESSMENT WIDGET ── */
+.assessment-wrap{background:var(--navy);padding:80px 56px}
+.assessment-inner{max-width:860px;margin:0 auto}
+.assessment-q{margin-bottom:16px;padding:20px 24px;background:rgba(255,255,255,0.05);border-radius:4px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:background 0.2s}
+.assessment-q:hover{background:rgba(255,255,255,0.09)}
+.assessment-q input[type=checkbox]{width:18px;height:18px;accent-color:var(--indigo);flex-shrink:0;cursor:pointer}
+.assessment-q label{font-size:15px;color:rgba(255,255,255,0.8);font-weight:300;cursor:pointer;line-height:1.4}
+.assessment-score{margin-top:32px;padding:28px 32px;background:rgba(0,117,187,0.15);border-radius:4px;border:1px solid var(--indigo);display:none}
+.assessment-score h4{font-family:var(--serif);font-size:20px;color:var(--white);margin-bottom:8px}
+.assessment-score p{font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:16px}
+.score-bar{height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:20px}
+.score-fill{height:100%;border-radius:3px;background:var(--indigo);transition:width 0.6s ease}
+@media(max-width:1024px){.phase-steps{grid-template-columns:1fr 1fr}.diff-grid{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.assessment-wrap{padding:60px 24px}.phase-steps{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <img class="nav-logo-img" id="navLogo" onclick="go('home')" src="images/logo-black.png" alt="Solenture" style="height:45px;cursor:pointer;">
+    <div class="nav-links">
+      <a onclick="go('about')" data-p="about">About</a>
+      <div class="nav-item-drop">
+        <div class="nav-drop-trigger" data-p-group="consulting,brokerage,total-rewards,wealth">What We Do <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="nav-dropdown">
+          <a onclick="go('consulting')" data-p="consulting">Consulting</a>
+          <a onclick="go('brokerage')" data-p="brokerage">Business Brokerage</a>
+          <a onclick="go('total-rewards')" data-p="total-rewards">Total Rewards</a>
+          <a onclick="go('wealth')" data-p="wealth">Wealth Management</a>
+        </div>
+      </div>
+      <a onclick="go('reedmark')" data-p="reedmark">Reedmark Advisors</a>
+      <a onclick="go('team')" data-p="team">Team</a>
+      <a onclick="go('contact')" class="nav-cta" data-p="contact">Get In Touch</a>
+    </div>
+    <div class="hamburger" id="ham" onclick="toggleMob()"><span></span></div>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mob">
+  <a onclick="go('home');toggleMob()">Home</a>
+  <a onclick="go('about');toggleMob()">About</a>
+  <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--mid-gray);margin-top:8px">What We Do</div>
+  <a onclick="go('consulting');toggleMob()" style="font-size:22px">Consulting</a>
+  <a onclick="go('brokerage');toggleMob()" style="font-size:22px">Business Brokerage</a>
+  <a onclick="go('total-rewards');toggleMob()" style="font-size:22px">Total Rewards</a>
+  <a onclick="go('wealth');toggleMob()" style="font-size:22px">Wealth Management</a>
+  <a onclick="go('reedmark');toggleMob()">Reedmark Advisors</a>
+  <a onclick="go('team');toggleMob()">Team</a>
+  <a onclick="go('contact');toggleMob()">Contact</a>
+</div>
+
+<!-- ═══════════════ HOME ═══════════════ -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-bg" id="heroBg">
+      <div class="hero-poster"></div>
+      <video autoplay muted loop playsinline preload="auto" oncanplaythrough="document.getElementById('heroBg').classList.add('video-loaded')">
+        <source src="hero-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Founded 1965 &middot; Pittsburgh, PA &middot; 60 Years of Experience</div>
+      <h1>Building the private wealth of the people who build business.</h1>
+      <p class="hero-sub">Solenture guides privately-held businesses to maximize value, navigate ownership transitions, and convert that value into lasting personal wealth for the owners and executives who earned it.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" onclick="go('contact')">Start a Conversation</a>
+        <a class="btn-ghost" onclick="go('about')">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-stats"><div class="hero-stats-inner">
+      <div class="h-stat"><div class="h-stat-num" data-t="60" data-s="+">0</div><div class="h-stat-label">Years in Practice</div></div>
+      <div class="h-stat"><div class="h-stat-num" data-t="100" data-s="+">0</div><div class="h-stat-label">Years Combined Experience</div></div>
+      <div class="h-stat"><div class="h-stat-num" data-t="4">0</div><div class="h-stat-label">Integrated Service Lines</div></div>
+    </div></div>
+  </section>
+
+  <div class="mission-band">
+    <div class="s-label">Our Mission</div>
+    <p class="mission-quote">&ldquo;Solenture guides privately-held businesses to maximize value for its owners and the people that run them to ultimately convert that income and the value created into personal private wealth.&rdquo;</p>
+  </div>
+
+  <section class="s">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">What We Do</div>
+      <h2 class="s-title">Four disciplines. One integrated strategy.</h2>
+      <div class="s-rule"></div>
+      <p class="s-desc">Most firms operate in silos. At Solenture, our consulting, business brokerage, total rewards, and wealth management practices are built to work together &mdash; so the value you create in your business becomes the wealth you build for your life.</p></div>
+      <div class="svc-grid">
+        <div class="svc-card rv rv-d1" onclick="go('consulting')">
+          <h3>Consulting</h3>
+          <p>Strategic counsel for business owners navigating growth, succession, and transition from day-to-day operations to your ultimate exit.</p>
+          <ul><li>Business Transition &amp; Exit Planning</li><li>Strategic Planning</li><li>Management Consulting</li><li>Succession Planning</li></ul>
+          <div class="svc-link">Explore Consulting <span>&rarr;</span></div>
+        </div>
+        <div class="svc-card rv rv-d2" onclick="go('brokerage')">
+          <h3>Business Brokerage</h3>
+          <p>Outcome-driven exit advisory for business owners who want to maximize what they keep &mdash; not just what they sell for.</p>
+          <ul><li>Exit Readiness &amp; Value Optimization</li><li>Transaction Coordination &amp; Advisory</li><li>Buyer Engagement &amp; Negotiation Support</li><li>Post-Sale Wealth Integration</li></ul>
+          <div class="svc-link">Explore Business Brokerage <span>&rarr;</span></div>
+        </div>
+        <div class="svc-card rv rv-d3" onclick="go('total-rewards')">
+          <h3>Total Rewards</h3>
+          <p>Attract, retain, and reward the talent that drives your company&rsquo;s value. Services from broad-based compensation to executive incentive plans.</p>
+          <ul><li>Qualified &amp; Non-Qualified Retirement Plans</li><li>Incentive Plans &amp; Compensation Consulting</li><li>Employee Benefits</li><li>Executive Supplemental Plans</li></ul>
+          <div class="svc-link">Explore Total Rewards <span>&rarr;</span></div>
+        </div>
+        <div class="svc-card rv rv-d4" onclick="go('wealth')">
+          <h3>Wealth Management</h3>
+          <p>Comprehensive wealth strategies for business owners, executives, and their families built to protect and grow what you&rsquo;ve worked to build.</p>
+          <ul><li>Financial &amp; Estate Planning</li><li>Asset Management</li><li>Insurance Solutions</li><li>Executive &amp; Multi-Family Office</li></ul>
+          <div class="svc-link">Explore Wealth Management <span>&rarr;</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Who We Serve</div>
+      <h2 class="s-title">Built for business owners and the executives who lead them.</h2>
+      <div class="s-rule"></div></div>
+      <div style="margin-top:56px;margin-bottom:64px;border-radius:4px;overflow:hidden;height:320px">
+        <img src="images/resize-call-to-action-2.jpeg" alt="Solenture consulting" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.9) saturate(0.9)" loading="lazy">
+      </div>
+      <div class="serve-grid">
+        <div class="serve-item rv rv-d1"><div class="serve-num">01</div><h4>Privately-Held Businesses</h4><p>From growth-stage companies to established enterprises, we help owners build operational value, plan for what comes next, and &mdash; when the time is right &mdash; execute a transaction that maximizes what they keep.</p></div>
+        <div class="serve-item rv rv-d2"><div class="serve-num">02</div><h4>Executives &amp; Key Leaders</h4><p>Your compensation, benefits, and wealth accumulation deserve the same strategic attention you give your company. Through our C-Suite&reg; Executive Office, we provide concierge-level planning for top-tier talent.</p></div>
+        <div class="serve-item rv rv-d3"><div class="serve-num">03</div><h4>Business-Owning Families</h4><p>When your business is your wealth, the stakes of every decision are personal. We help families align business performance with estate goals, generational wealth transfer, and the life you want after the business.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="photo-band rv">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80" alt="Pittsburgh architecture" loading="lazy">
+    <div class="photo-band-overlay">
+      <div class="photo-band-content">
+        <div class="s-label">Since 1965</div>
+        <h3>Six decades of guiding businesses from formation through exit.</h3>
+        <p>Our multi-disciplinary team connects consulting, compensation, and wealth management into one integrated relationship.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="s s-navy">
+    <div class="s-inner" style="text-align:center">
+      <div class="rv"><div class="s-label" style="color:var(--indigo)">Our Process</div>
+      <h2 class="s-title" style="color:white;margin:0 auto 8px">Applied to every engagement, every time.</h2></div>
+      <div class="process-steps">
+        <div class="p-step rv rv-d1"><div class="step-dot">1</div><h4>Discover</h4><p>Deep conversations to understand your goals, your philosophy, and how you define success.</p></div>
+        <div class="p-step rv rv-d2"><div class="step-dot">2</div><h4>Analyze</h4><p>Critical examination of your current state and the landscape of solutions available to you.</p></div>
+        <div class="p-step rv rv-d3"><div class="step-dot">3</div><h4>Create</h4><p>A custom solution designed specifically for your situation &mdash; never off-the-shelf.</p></div>
+        <div class="p-step rv rv-d4"><div class="step-dot">4</div><h4>Implement</h4><p>Full administrative and communication support throughout execution of the plan.</p></div>
+        <div class="p-step rv"><div class="step-dot">5</div><h4>Monitor</h4><p>Ongoing oversight to adapt as your business, your goals, and the landscape evolve.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <div class="partners-inner rv">
+      <div class="partners-label">Strategic Partners &amp; Affiliates</div>
+      <div class="partners-logos">
+        <img src="images/C-Suite-Circle-Grey__1_.PNG" alt="C-Suite">
+        <img src="images/APEX__1_.png" alt="APEX Management Group">
+        <img src="images/Concierge-Logo__1_.png" alt="Concierge TPA">
+        <img src="images/ACA-Suite-__1_.png" alt="ACA Suite">
+        <img src="images/BPA__1_.png" alt="BPA Bestlife">
+        <img src="images/RCI__1_.png" alt="RCI">
+        <img src="images/logo-new__1_.png" alt="Leading Edge">
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-info rv">
+        <div class="s-label">Start the Conversation</div>
+        <h2 class="s-title">Let&rsquo;s venture together.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc" style="max-width:none">Whether you&rsquo;re looking to build business value, plan your exit, retain key talent, or secure your family&rsquo;s financial future, Solenture has been doing this since 1965. Tell us where you are, and we&rsquo;ll show you where you could go.</p>
+        <div style="margin-top:32px">
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>412-281-5472</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>info@solenture.com</div>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>I'm Interested In&hellip;</label><select name="interest"><option value="">Select&hellip;</option><option>Business Consulting / Exit Planning</option><option>Total Rewards &amp; Compensation</option><option>Wealth Management</option><option>Not sure — let's talk</option></select></div>
+          <div class="form-group"><label>Tell Us Briefly About Your Situation</label><textarea name="message"></textarea></div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<div class="page" id="page-about">
+  <div class="page-hero" style="padding:160px 56px 100px;">
+    <div class="page-hero-img"><img src="images/stairwell-min__1_.jpg" alt=""></div>
+    <div class="page-hero-content rv"><div class="s-label">Who We Are</div>
+    <h1 class="s-title" style="font-size:clamp(32px,4vw,48px);color:var(--white)">Over six decades of innovative thinking. One constant commitment.</h1>
+    <div class="s-rule"></div>
+    <p class="s-desc" style="color:rgba(255,255,255,0.65)">Solenture has been built &mdash; and rebuilt &mdash; around one principle: the best solutions begin with understanding. Not assumptions.</p></div>
+  </div>
+
+  <section class="s">
+    <div class="s-inner">
+      <div class="split-img rv" style="margin-bottom:80px;border-radius:4px;overflow:hidden">
+          <div class="split-img-photo">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Modern office architecture" loading="lazy">
+          </div>
+          <div class="split-img-text" style="background:var(--off-white)">
+            <div class="s-label">Est. 1965</div>
+            <h3 style="font-family:var(--serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:16px">A firm built on understanding, not assumptions.</h3>
+            <p style="font-size:15px;line-height:1.8;color:var(--dark-gray);font-weight:300">From Pittsburgh to the New York metro area, Solenture has spent six decades developing custom solutions for business owners, executives, and their families.</p>
+          </div>
+        </div>
+        <div class="about-split">
+        <div class="rv">
+          <div class="s-label">Our Philosophy</div>
+          <h2 class="s-title">The Benefits of Innovative Thinking&reg;</h2>
+          <div class="s-rule"></div>
+          <p class="s-desc" style="max-width:none">From the beginning, Solenture has been known for its ability to develop custom solutions to meet client needs. This is not accomplished by accident but rather through a clear understanding of each client&rsquo;s philosophy or intentions that drive the solutions that are deployed.</p>
+          <p class="s-desc" style="max-width:none;margin-top:12px">Few operational, administrative, or financial structures are static. Economic shifts, tax law changes, and demographic evolution all demand adaptation. But the key driver of change is always people and their evolving views.</p>
+          <p class="s-desc" style="max-width:none;margin-top:12px">The Benefits of Innovative Thinking&reg; extend far beyond design. It drives us to stay mindful of change and adapt continuously to preserve or improve client outcomes.</p>
+        </div>
+        <div class="rv rv-d2">
+          <div class="pull-quote">&ldquo;Solutions tailored to your unique needs. Not the other way around.&rdquo;</div>
+          <p class="s-desc" style="max-width:none">With over 100 combined years of professional experience across financial services, insurance, executive benefits, and management consulting, our team brings depth and breadth that single-threaded firms simply cannot match.</p>
+          <div class="advisors-note">
+            <h4>About Reedmark Advisors, LLC</h4>
+            <p>Investment advisory and qualified retirement plan services are offered through Reedmark Advisors, LLC. This structure ensures our clients receive fully registered, fiduciary investment management, seamlessly integrated within the broader Solenture relationship.</p>
+            <p style="margin-top:12px"><a onclick="go('reedmark')" class="svc-link" style="display:inline-flex">Learn More About Reedmark Advisors <span>&rarr;</span></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Our History</div>
+      <h2 class="s-title">Over six decades of progress.</h2>
+      <div class="s-rule"></div></div>
+      <div class="timeline">
+        <div class="tl-item rv"><div class="tl-year">1965 &mdash; Founded</div><div class="tl-era">The Consulting &amp; Financial Services Firm</div><p>Solenture began as a consulting and financial services firm advising private businesses and high-net-worth individuals. Core competencies included Business Owner Succession, Estate Planning, Life Insurance, Wealth Management, and Disability planning &mdash; the foundations that remain central to the firm today.</p></div>
+        <div class="tl-item rv"><div class="tl-year">1970s &mdash; Expansion</div><div class="tl-era">Into Executive Benefits</div><p>Solenture entered the Executive Benefits market, leveraging new innovations to expand into public companies. The need then, as now, was for comprehensive custom solutions addressing the complex compensation needs of key executives.</p></div>
+        <div class="tl-item rv"><div class="tl-year">1980s&ndash;90s &mdash; Growth</div><div class="tl-era">C-Suite&reg; Practice &amp; Broader Services</div><p>Continued expansion into broader consulting and administrative services led to the creation of Solenture&rsquo;s C-Suite&reg; practice, now a hallmark offering. Companies increasingly turned to Solenture for core employee benefits design and executive transition planning.</p></div>
+        <div class="tl-item rv"><div class="tl-year">2000s&ndash;Today</div><div class="tl-era">The Integrated Solutions Venture</div><p>Today, Solenture&rsquo;s services are fully integrated across business consulting, total rewards, and wealth management. The 2024 acquisition of Reedmark Advisors adds registered investment advisory and qualified retirement plan expertise, completing the firm&rsquo;s ability to serve business owners from formation through exit and into personal wealth management.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-info rv">
+        <div class="s-label">Ready to Talk?</div>
+        <h2 class="s-title">Your story is unique. So is our approach.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc" style="max-width:none">Let&rsquo;s start with a conversation about where you are and where you want to go.</p>
+        <div style="margin-top:32px">
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>412-281-5472</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>info@solenture.com</div>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>I'm Interested In&hellip;</label><select name="interest"><option value="">Select&hellip;</option><option>Business Consulting / Exit Planning</option><option>Total Rewards &amp; Compensation</option><option>Wealth Management</option><option>Not sure — let's talk</option></select></div>
+          <div class="form-group"><label>Tell Us Briefly About Your Situation</label><textarea name="message"></textarea></div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════ CONSULTING ═══════════════ -->
+<div class="page" id="page-consulting">
+  <div class="page-hero" style="padding:160px 56px 100px;">
+    <div class="page-hero-img"><img src="images/AdobeStock_102381789-min__1_.jpeg" alt=""></div>
+    <div class="page-hero-content rv"><div class="s-label">Consulting</div>
+    <h1 class="s-title" style="font-size:clamp(32px,4vw,48px);color:var(--white)">Your business has more runway. Let&rsquo;s find it.</h1>
+    <div class="s-rule"></div>
+    <p class="s-desc" style="color:rgba(255,255,255,0.65)">From strategic planning to exit execution, Solenture brings 60+ years of business consulting experience to privately-held companies navigating their most important decisions.</p></div>
+  </div>
+
+  <section class="s">
+    <div class="s-inner">
+      <div class="photo-band rv" style="margin-bottom:64px;border-radius:4px;overflow:hidden;height:340px">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&q=80" alt="Business strategy meeting" loading="lazy">
+        <div class="photo-band-overlay">
+          <div class="photo-band-content">
+            <h3>Strategic counsel for your most important decisions.</h3>
+            <p>From growth planning to exit execution, we bring 60+ years of pattern recognition to every engagement.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="showTab('t-exit',this)">Transition &amp; Exit Planning</button>
+        <button class="tab-btn" onclick="showTab('t-strat',this)">Strategic Planning</button>
+        <button class="tab-btn" onclick="showTab('t-mgmt',this)">Management Consulting</button>
+      </div>
+
+      <div class="tab-content active" id="t-exit">
+        <div class="svc-detail">
+          <div class="rv">
+            <div class="s-label">Transition &amp; Exit Planning</div>
+            <h3>Your exit is the most important deal you&rsquo;ll ever do.</h3>
+            <p>Most business owners spend years building their company but very little time preparing for the transition that will ultimately define their financial legacy. Whether you&rsquo;re thinking about succession to family, a management buyout, or a third-party sale, the planning you do today determines the outcome you achieve.</p>
+            <p>Solenture works with business owners well in advance of a transition event to maximize enterprise value, align business and personal financial goals, and execute a plan that reflects what you&rsquo;ve built.</p>
+            <div class="pull-quote">&ldquo;We help families and business owners align their private needs with their company&rsquo;s performance, with a dedicated focus on increasing long-term value.&rdquo;</div>
+            <div class="cross-note">Exit planning and post-liquidity wealth management work in tandem. Clients often engage our Wealth Management team concurrently to ensure the proceeds of a business sale are deployed in alignment with long-term personal financial objectives.</div>
+          </div>
+          <div class="rv rv-d2">
+            <ul class="svc-list">
+              <li>Business valuation and value-gap analysis</li>
+              <li>Ownership succession planning</li>
+              <li>Family business transition</li>
+              <li>Management buyout preparation</li>
+              <li>Third-party sale readiness</li>
+              <li>Exit timeline and milestone planning</li>
+              <li>Personal wealth alignment post-exit</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="t-strat">
+        <div class="svc-detail">
+          <div class="rv">
+            <div class="s-label">Strategic Planning</div>
+            <h3>Vision is only valuable when it becomes a plan.</h3>
+            <p>Running a business well is demanding work. It can be hard to think strategically when you&rsquo;re deep in operations. Solenture acts as a strategic partner, helping you define the vision, build the right strategies, and stay accountable to the goals that matter most.</p>
+            <p>We bring an outside perspective, structured process, and 60+ years of pattern recognition to help you identify opportunities and obstacles before they become urgent.</p>
+            <div class="pull-quote">&ldquo;We help our employer clients determine the vision, build the right strategies, and stay focused on any needed changes.&rdquo;</div>
+          </div>
+          <div class="rv rv-d2">
+            <ul class="svc-list">
+              <li>Vision and goals clarification</li>
+              <li>Strategic plan development</li>
+              <li>Competitive positioning</li>
+              <li>Organizational alignment</li>
+              <li>Performance metrics and accountability</li>
+              <li>Long-range planning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="t-mgmt">
+        <div class="svc-detail">
+          <div class="rv">
+            <div class="s-label">Management Consulting</div>
+            <h3>Fresh eyes on your most complex challenges.</h3>
+            <p>Solenture&rsquo;s management consulting practice brings a unique combination of time-tested acumen and innovative thinking to private and public entities. We&rsquo;ve partnered with business owners long enough to know that the right solution rarely looks like the obvious one.</p>
+            <p>Our team has held operational leadership roles across finance, supply chain, human resources, and project management in organizations ranging from Fortune 500 companies to family-held enterprises, giving us the credibility to advise at the highest levels.</p>
+          </div>
+          <div class="rv rv-d2">
+            <ul class="svc-list">
+              <li>Business process improvement</li>
+              <li>Cost control and efficiency analysis</li>
+              <li>Talent and organizational alignment</li>
+              <li>Top-line growth strategy</li>
+              <li>Change management support</li>
+              <li>HR function optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-info rv">
+        <div class="s-label">Ready to Talk?</div>
+        <h2 class="s-title">Your next chapter starts with a conversation.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc" style="max-width:none">Whether you&rsquo;re actively planning an exit or just beginning to think about your long-term strategy, the best time to engage Solenture is before you need us.</p>
+        <div style="margin-top:32px">
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>412-281-5472</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>info@solenture.com</div>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>I'm Interested In&hellip;</label><select name="interest"><option value="">Select&hellip;</option><option>Business Consulting / Exit Planning</option><option>Total Rewards &amp; Compensation</option><option>Wealth Management</option><option>Not sure — let's talk</option></select></div>
+          <div class="form-group"><label>Tell Us Briefly About Your Situation</label><textarea name="message"></textarea></div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════ TOTAL REWARDS ═══════════════ -->
+<div class="page" id="page-total-rewards">
+  <div class="page-hero" style="padding:160px 56px 100px;">
+    <div class="page-hero-img"><img src="images/AdobeStock_354715351__1_.jpeg" alt="" style="object-position:center 30%"></div>
+    <div class="page-hero-content rv"><div class="s-label">Total Rewards</div>
+    <h1 class="s-title" style="font-size:clamp(32px,4vw,48px);color:var(--white)">The right people stay when the rewards are right.</h1>
+    <div class="s-rule"></div>
+    <p class="s-desc" style="color:rgba(255,255,255,0.65)">Your team is the engine of your company&rsquo;s value. Solenture designs total rewards strategies that attract, retain, and motivate the talent your business depends on &mdash; from your frontline to your C-suite.</p></div>
+  </div>
+
+  <section class="s">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Total Rewards Services</div>
+      <h2 class="s-title">Compensation that works as hard as your people do.</h2>
+      <div class="s-rule"></div>
+      <p class="s-desc">Aligning compensation, benefits, and incentive structures across your organization is complex. Solenture simplifies the process and ensures that every element of your total rewards program serves both the company&rsquo;s goals and your employees&rsquo; needs.</p></div>
+
+      <div class="photo-band rv" style="margin-top:56px;margin-bottom:64px;border-radius:4px;overflow:hidden;height:300px">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1600&q=80" alt="Executive team collaboration" loading="lazy">
+        <div class="photo-band-overlay">
+          <div class="photo-band-content">
+            <h3>Compensation that works as hard as your people do.</h3>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:0">
+        <div class="svc-detail rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
+          <div><h3>Qualified &amp; Non-Qualified Retirement Plans</h3>
+          <p>From 401(k) design to non-qualified deferred compensation plans for key executives, Solenture and <a onclick="go('reedmark')" style="color:var(--indigo);text-decoration:underline">Reedmark Advisors, LLC</a> bring decades of retirement plan expertise to every engagement.</p>
+          <p style="font-size:12px;color:var(--mid-gray);font-style:italic;margin-top:8px">*Offered through <a onclick="go('reedmark')" style="color:inherit;text-decoration:underline">Reedmark Advisors, LLC</a></p></div>
+          <ul class="svc-list"><li>401(k) plan design and oversight</li><li>Defined benefit / pension plans</li><li>Non-qualified deferred compensation</li><li>Plan fiduciary support (AIF-credentialed)</li></ul>
+        </div>
+        <div class="svc-detail rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
+          <div><h3>Incentive Plans &amp; Compensation Consulting</h3>
+          <p>We design compensation structures that align employee behavior with business outcomes, balancing market competitiveness with internal equity and long-term incentive strategy.</p></div>
+          <ul class="svc-list"><li>Base &amp; variable pay design</li><li>Short- and long-term incentive plans</li><li>Equity and phantom equity structures</li><li>Executive compensation benchmarking</li></ul>
+        </div>
+        <div class="svc-detail rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
+          <div><h3>Employee Benefits &amp; Executive Supplemental Plans</h3>
+          <p>Comprehensive benefits packages attract better talent and reduce turnover. For executives, supplemental plans provide the differentiated rewards necessary to retain the people your business can&rsquo;t afford to lose.</p></div>
+          <ul class="svc-list"><li>Healthcare benefits strategy</li><li>Executive life and disability</li><li>Supplemental executive retirement plans</li><li>Split-dollar arrangements</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="svc-detail">
+        <div class="rv">
+          <div class="s-label">C-Suite&reg; Executive Office</div>
+          <h3>Concierge-level support for your most valuable people.</h3>
+          <p>Strong leadership elevates a company. Losing it can set one back years. Solenture&rsquo;s C-Suite&reg; Executive Office delivers custom, comprehensive solutions to help businesses retain their executive team and give those executives the personalized attention they deserve.</p>
+          <p>We act as a single point of contact for the communication, administration, and compliance of your most complex executive programs &mdash; freeing HR to focus on strategy rather than plan administration.</p>
+          <div class="pull-quote">&ldquo;In today&rsquo;s competitive market, retaining top-tier talent requires more than compensation. It requires a relationship.&rdquo;</div>
+        </div>
+        <div class="rv rv-d2">
+          <ul class="svc-list"><li>Executive benefit plan design</li><li>Communication and education programs</li><li>Single-contact administration</li><li>Compliance support</li><li>Robust reporting and behavioral modeling</li><li>Board member and HR staff support</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-info rv">
+        <div class="s-label">Get Started</div>
+        <h2 class="s-title">Let&rsquo;s build a rewards program that works.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc" style="max-width:none">From retirement plan audits to full compensation restructuring, Solenture works at whatever level your organization needs. Let&rsquo;s start with a conversation.</p>
+        <div style="margin-top:32px">
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>412-281-5472</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>info@solenture.com</div>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>I'm Interested In&hellip;</label><select name="interest"><option value="">Select&hellip;</option><option>Business Consulting / Exit Planning</option><option>Total Rewards &amp; Compensation</option><option>Wealth Management</option><option>Not sure — let's talk</option></select></div>
+          <div class="form-group"><label>Tell Us Briefly About Your Situation</label><textarea name="message"></textarea></div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════ WEALTH MANAGEMENT ═══════════════ -->
+<div class="page" id="page-wealth">
+  <div class="page-hero" style="padding:160px 56px 100px;">
+    <div class="page-hero-img"><img src="images/AdobeStock_364149943-min-min__1_.jpeg" alt=""></div>
+    <div class="page-hero-content rv"><div class="s-label">Wealth Management</div>
+    <h1 class="s-title" style="font-size:clamp(32px,4vw,48px);color:var(--white)">From business value to personal wealth. We bridge both worlds.</h1>
+    <div class="s-rule"></div>
+    <p class="s-desc" style="color:rgba(255,255,255,0.65)">Solenture&rsquo;s multi-disciplinary team is uniquely positioned to help business owners, executives, and their families turn the value they create into the wealth they keep.</p></div>
+  </div>
+
+  <section class="s">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">A Different Kind of Wealth Management</div>
+      <h2 class="s-title">Wealth management for people who built their own.</h2>
+      <div class="s-rule"></div>
+      <p class="s-desc" style="max-width:720px">Managing wealth goes well beyond investing. For business owners and executives, it means simultaneously coordinating business income, equity value, estate exposure, insurance coverage, and family goals in alignment. That&rsquo;s the kind of complexity Solenture is built for.</p>
+      <p class="s-desc" style="max-width:720px;margin-top:12px">Through <a onclick="go('reedmark')" style="color:var(--indigo);text-decoration:underline">Reedmark Advisors, LLC</a>, our team offers registered investment advisory services alongside our broader planning practice, giving clients a fully integrated relationship without the friction of coordinating multiple firms.</p></div>
+
+      <div class="serve-grid" style="margin-top:64px">
+        <div class="serve-item rv rv-d1"><h4>Financial &amp; Estate Planning</h4><p>We help clients develop a clear vision for the use and distribution of their wealth. From tax-efficient estate structures to trust strategies and charitable planning, Solenture coordinates the full picture.</p><p style="font-size:12px;color:var(--mid-gray);font-style:italic;margin-top:8px">*Offered through <a onclick="go('reedmark')" style="color:inherit;text-decoration:underline">Reedmark Advisors, LLC</a></p></div>
+        <div class="serve-item rv rv-d2"><h4>Asset Management</h4><p>We help clients determine the allocation strategy that best aligns with their goals and risk tolerance, then access a network of investment managers to deploy those assets with precision and ongoing oversight.</p><p style="font-size:12px;color:var(--mid-gray);font-style:italic;margin-top:8px">*Offered through <a onclick="go('reedmark')" style="color:inherit;text-decoration:underline">Reedmark Advisors, LLC</a></p></div>
+        <div class="serve-item rv rv-d3"><h4>Insurance Solutions</h4><p>From executive life and disability coverage to estate liquidity strategies and business continuation insurance, we ensure the right protections are in place at every stage of wealth accumulation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Executive Family Office</div>
+      <h2 class="s-title">Your career built your wealth. Now it needs a team dedicated to it.</h2>
+      <div class="s-rule"></div></div>
+      <div class="split-img rv" style="margin-top:48px;margin-bottom:56px;border-radius:4px;overflow:hidden">
+          <div class="split-img-photo">
+            <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1200&q=80" alt="Multi-generational family wealth" loading="lazy">
+          </div>
+          <div class="split-img-text" style="background:var(--navy)">
+            <div class="s-label" style="color:var(--indigo)">Your Legacy</div>
+            <h3 style="font-family:var(--serif);font-size:22px;font-weight:400;color:var(--white);margin-bottom:12px">Wealth management for people who built their own.</h3>
+            <p style="font-size:14px;line-height:1.7;color:rgba(255,255,255,0.5);font-weight:300">Simultaneously coordinating business income, equity value, estate exposure, insurance coverage, and family goals in alignment.</p>
+          </div>
+        </div>
+        <div class="serve-grid" style="margin-top:0;grid-template-columns:repeat(2,1fr)">
+        <div class="serve-item rv"><h4>Planning</h4><p>A successful retirement and the ability to direct wealth for the benefit of others require vision and planning. Solenture helps clients develop a unique philosophy regarding wealth, then builds the plans to execute it.</p></div>
+        <div class="serve-item rv rv-d1"><h4>Asset Advisory</h4><p>We help determine the right allocation for your invested assets, then access a curated network of investment firms to deploy those assets in alignment with your goals and risk tolerance.</p></div>
+        <div class="serve-item rv rv-d2"><h4>Family Services</h4><p>Tax coordination, bill management, travel planning, family governance, and next-generation wealth education. Solenture provides the services that allow high-net-worth families to live fully without administrative burden.</p></div>
+        <div class="serve-item rv rv-d3"><h4>Risk Management</h4><p>From asset ownership structure to insurance coverage to liability protection, we proactively balance risk in alignment with your wealth and your risk appetite.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-info rv">
+        <div class="s-label">Start Planning</div>
+        <h2 class="s-title">Let&rsquo;s talk about what your wealth should be doing.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc" style="max-width:none">Whether you&rsquo;re preparing for a liquidity event, managing accumulated executive wealth, or planning for the generation after you, Solenture provides the integrated strategy that most firms simply can&rsquo;t offer.</p>
+        <div style="margin-top:32px">
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>412-281-5472</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>info@solenture.com</div>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>I'm Interested In&hellip;</label><select name="interest"><option value="">Select&hellip;</option><option>Business Consulting / Exit Planning</option><option>Total Rewards &amp; Compensation</option><option>Wealth Management</option><option>Not sure — let's talk</option></select></div>
+          <div class="form-group"><label>Tell Us Briefly About Your Situation</label><textarea name="message"></textarea></div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ═══════════════ REEDMARK ADVISORS ═══════════════ -->
+<div class="page" id="page-reedmark">
+  <div class="page-hero" style="padding:160px 56px 100px;">
+    <div class="page-hero-img"><img src="images/AdobeStock_190031926-min-_1_.jpeg" alt=""></div>
+    <div class="page-hero-content rv">
+      <div class="s-label">Reedmark Advisors, LLC</div>
+      <h1 class="s-title" style="font-size:clamp(32px,4vw,48px);color:var(--white);max-width:760px">Proven retirement plan expertise. A full-spectrum wealth practice.</h1>
+      <div class="s-rule"></div>
+      <p class="s-desc" style="color:rgba(255,255,255,0.65);max-width:620px">For over 50 years, Reedmark Advisors has guided employers, healthcare systems, and non-profits through the responsibilities of sponsoring a retirement plan &mdash; and guided the individuals behind those organizations toward the wealth they&rsquo;ve worked to build.</p>
+    </div>
+  </div>
+
+  <!-- Intro / Positioning -->
+  <section class="s">
+    <div class="s-inner">
+      <div class="about-split">
+        <div class="rv">
+          <div class="s-label">Who We Are</div>
+          <h2 class="s-title">More than retirement plans &mdash; a complete wealth practice.</h2>
+          <div class="s-rule"></div>
+          <p class="s-desc" style="max-width:none">Reedmark Advisors, LLC is a registered investment advisor built on a foundation of qualified retirement plan expertise. As fiduciaries, our team has spent decades helping mid-size employers, healthcare systems, and large non-profit organizations navigate the design, administration, and compliance obligations of sponsoring a retirement plan under ERISA.</p>
+          <p class="s-desc" style="max-width:none;margin-top:12px">But Reedmark has grown well beyond plan administration. Today, our advisors provide comprehensive financial and estate planning, asset management, and investment advisory services, serving not just the organizations we work with, but the executives, owners, and families behind them.</p>
+          <p class="s-desc" style="max-width:none;margin-top:12px">In 2024, Reedmark joined the Solenture family of companies. The result is a rare combination: Reedmark&rsquo;s deep, specialized retirement plan and registered investment advisory expertise, integrated with Solenture&rsquo;s broader practice in business consulting, total rewards, and business transition advisory.</p>
+        </div>
+        <div class="rv rv-d2">
+          <div class="pull-quote">&ldquo;ERISA created a need for subject matter experts to guide plan sponsors through design, adoption, operation, and monitoring. Reedmark brings that expertise to the market.&rdquo;</div>
+          <div class="advisors-note">
+            <h4>Our Relationship with Solenture</h4>
+            <p>Reedmark Advisors, LLC operates as part of the Solenture family of companies. Clients of Solenture&rsquo;s consulting, business brokerage, and total rewards practices have direct access to Reedmark&rsquo;s registered investment advisory and retirement plan services; and Reedmark clients benefit from Solenture&rsquo;s broader bench of business and compensation consulting expertise. One relationship. No coordination gap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Band -->
+  <div class="photo-band rv">
+    <img src="images/adobestock_190031926-min-_1_.jpeg" alt="Financial district" loading="lazy">
+    <div class="photo-band-overlay">
+      <div class="photo-band-content">
+        <div class="s-label">Somerville, NJ</div>
+        <h3>Registered investment advisors. Fiduciaries. Subject matter experts.</h3>
+        <p>Serving employers, healthcare systems, non-profits, and the individuals who lead them.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv">
+        <div class="s-label">What We Do</div>
+        <h2 class="s-title">Two practices. One fiduciary standard.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc">Reedmark&rsquo;s work falls into two connected areas: the retirement plan consulting the firm was built on, and the personal wealth management it has grown into.</p>
+      </div>
+
+      <div class="svc-detail rv" style="margin-top:56px;padding-bottom:56px;border-bottom:1px solid var(--light-gray)">
+        <div>
+          <h3>Qualified Retirement Plan Consulting</h3>
+          <p>Sponsoring a retirement plan is a fiduciary responsibility &mdash; one that requires a comprehensive, process-driven approach to compliance and plan governance under ERISA. Reedmark&rsquo;s senior staff brings decades of experience across the full breadth of plan types, working alongside employers, healthcare systems, and non-profit organizations to design, implement, and monitor plans that serve both the organization and its employees.</p>
+          <p>Through Solenture&rsquo;s Total Rewards practice, this expertise extends into non-qualified and executive deferred compensation strategies, giving organizations a single source for retirement and compensation planning at every level.</p>
+        </div>
+        <ul class="svc-list">
+          <li>401(k), 403(b), and 457(b) plan design and oversight</li>
+          <li>Defined benefit and traditional pension plans</li>
+          <li>409A deferred compensation plans</li>
+          <li>Fiduciary and non-fiduciary advisory services</li>
+          <li>Plan governance, compliance, and monitoring</li>
+          <li>Vendor and recordkeeper evaluation</li>
+        </ul>
+      </div>
+
+      <div class="svc-detail rv" style="padding-top:56px">
+        <div>
+          <h3>Personal Wealth &amp; Investment Advisory</h3>
+          <p>The same fiduciary standard Reedmark applies to retirement plans extends to individuals. As a registered investment advisor, Reedmark provides financial and estate planning, asset management, and investment advisory services for executives, business owners, and families, many of whom we first came to know through their organization&rsquo;s retirement plan.</p>
+          <p>For Solenture clients navigating a business transition or liquidity event, Reedmark serves as the wealth management arm of the relationship, coordinating tax-efficient deployment of proceeds, estate structures, and long-term investment strategy without introducing a new firm or a new point of contact.</p>
+          <div class="cross-note">Reedmark&rsquo;s asset management and financial &amp; estate planning services are also referenced throughout Solenture&rsquo;s Wealth Management practice &mdash; reflecting the single, integrated relationship clients receive across both firms.</div>
+        </div>
+        <ul class="svc-list">
+          <li>Financial and estate planning</li>
+          <li>Asset management and investment advisory</li>
+          <li>Tax-efficient wealth deployment</li>
+          <li>Trust and legacy planning coordination</li>
+          <li>Post-transaction wealth integration</li>
+          <li>Ongoing portfolio monitoring and review</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Timeline -->
+  <section class="s">
+    <div class="s-inner">
+      <div class="rv">
+        <div class="s-label">Our History</div>
+        <h2 class="s-title">From one plan to a full-spectrum practice.</h2>
+        <div class="s-rule"></div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item rv"><div class="tl-year">A Founder&rsquo;s Vision</div><div class="tl-era">1972</div><p>Anthony Pascazio enters the financial services industry and designs a retirement plan for a small transportation company in central New Jersey &mdash; an early experience that would shape the course of his career.</p></div>
+        <div class="tl-item rv"><div class="tl-year">The ERISA Foundation</div><div class="tl-era">1974</div><p>The Employee Retirement Income Security Act establishes a new standard for retirement plan administration and creates lasting demand for specialized expertise. Pascazio immerses himself in the new law, becoming a subject matter expert as the industry takes shape around him.</p></div>
+        <div class="tl-item rv"><div class="tl-year">Reedmark Is Established</div><div class="tl-era">Foundation</div><p>ERISA created a need for subject matter experts to guide plan sponsors through the design, adoption, operation, and monitoring of their retirement plans. Reedmark brings that expertise to the market. A boutique retirement plan consulting practice is born.</p></div>
+        <div class="tl-item rv"><div class="tl-year">Expanding Our Expertise</div><div class="tl-era">Growth</div><p>Reedmark becomes recognized as one of the few firms with expertise across the full breadth of retirement plan options, including 401(a), 401(k), 403(b), defined benefit, 457(b), 457(f), and 409A deferred compensation plans, while building out a complete personal wealth management practice alongside it.</p></div>
+        <div class="tl-item rv"><div class="tl-year">Joining the Solenture Family</div><div class="tl-era">2024</div><p>To enhance client services and expand our reach, Reedmark joins Solenture,  integrating decades of retirement plan and wealth management expertise with a broader suite of business consulting, brokerage, and total rewards solutions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Perspective -->
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv">
+        <div class="s-label">From Our Founder</div>
+        <h2 class="s-title">Aligning your plan with your people.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc">Reedmark&rsquo;s approach has always started with a simple question: does your retirement plan give your people a real path to financial security, and does it reflect the culture and values of the organization offering it?</p>
+        <div class="founder-section">
+          <img class="founder-photo" src="images/cropped-resized-Pascazio_Tony_431--36743-Retouched__1_.jpg" alt="Anthony Pascazio">
+          <div>
+            <p class="founder-quote">&ldquo;Aligning your retirement plan with the long-term financial goals of your employees is a major step toward their financial independence. We&rsquo;ve been designing successful retirement plans for over 40 years. Let us show you how that experience can differentiate your plan, and your company.&rdquo;</p>
+            <div class="founder-attribution">Anthony Pascazio, Founder</div>
+            <p class="founder-context">Employers who view their benefits this way &mdash; as a genuine commitment to their people&rsquo;s future &mdash; consistently see the results in lower turnover and stronger morale. A well-aligned retirement plan isn&rsquo;t just a compliance obligation; it&rsquo;s one of the clearest signals a company can send about how it values its people.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-info rv">
+        <div class="s-label">Start the Conversation</div>
+        <h2 class="s-title">Fiduciary expertise. One integrated relationship.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc" style="max-width:none">Whether you&rsquo;re an employer evaluating your retirement plan, an executive planning for retirement, or a Solenture client preparing for a transition, Reedmark&rsquo;s team is ready to talk.</p>
+        <div style="margin-top:32px">
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>908-300-5292</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>info@solenture.com</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3"/></svg>92 East Main Street, Suite 203B &middot; Somerville, NJ 08876</div>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — Reedmark Advisors / Solenture.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>I'm Interested In&hellip;</label><select name="interest"><option value="">Select&hellip;</option><option>Qualified Retirement Plan Consulting</option><option>Personal Wealth &amp; Investment Advisory</option><option>Financial &amp; Estate Planning</option><option>Not sure — let's talk</option></select></div>
+          <div class="form-group"><label>Tell Us Briefly About Your Situation</label><textarea name="message"></textarea></div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════ BUSINESS BROKERAGE ═══════════════ -->
+<div class="page" id="page-brokerage">
+
+  <!-- Hero -->
+  <div class="page-hero" style="padding:160px 56px 100px;">
+    <div class="page-hero-img"><img src="images/AdobeStock_300882212__1_.jpeg" alt="" style="object-position:center bottom"></div>
+    <div class="page-hero-content rv">
+      <div class="s-label">Business Brokerage</div>
+      <h1 class="s-title" style="font-size:clamp(32px,4vw,52px);color:var(--white);max-width:760px">Maximize what you keep, not just what you sell for.</h1>
+      <div class="s-rule"></div>
+      <p class="s-desc" style="color:rgba(255,255,255,0.65);max-width:580px">Solenture serves as the lead advisor to business owners navigating a transition or sale. We start with you &mdash; your goals, your timeline, your definition of success &mdash; not the market.</p>
+    </div>
+  </div>
+
+  <!-- Positioning Statement -->
+  <section class="s">
+    <div class="s-inner">
+      <div class="about-split">
+        <div class="rv">
+          <div class="s-label">A Different Kind of Exit Advisor</div>
+          <h2 class="s-title">We don&rsquo;t just close deals. We design outcomes.</h2>
+          <div class="s-rule"></div>
+          <p class="s-desc" style="max-width:none">Traditional business brokerage is transaction-driven &mdash; focused on closing a deal and achieving a price. Solenture is outcome-driven. We differentiate ourselves by starting with the owner, not the market.</p>
+          <p class="s-desc" style="max-width:none;margin-top:12px">Every decision is anchored to your personal financial goals: what you need after the sale, how you want to be structured, and what the business should become. Only then do we determine if, when, and how a transaction should occur.</p>
+          <p class="s-desc" style="max-width:none;margin-top:12px">The result: not just a higher headline number, but a better net outcome. Better structure. Better terms. Better alignment with your life after the business.</p>
+        </div>
+        <div class="rv rv-d2">
+          <div class="pull-quote">&ldquo;Maximize what you keep, not just what you sell for.&rdquo;</div>
+          <div class="diff-grid" style="margin-top:0">
+            <div class="diff-card" style="padding:28px 24px">
+              <div class="s-label" style="color:var(--mid-gray)">Traditional Broker</div>
+              <ul>
+                <li>Transaction-driven, focused on closing</li>
+                <li>Starts with the market and buyer demand</li>
+                <li>Earns a fee on the sale price</li>
+                <li>Engagement ends at close</li>
+                <li>Tax and wealth planning are separate</li>
+              </ul>
+            </div>
+            <div class="diff-card highlight" style="padding:28px 24px">
+              <div class="s-label">Solenture</div>
+              <ul>
+                <li style="color:rgba(255,255,255,0.8)">Outcome-driven, focused on net result</li>
+                <li style="color:rgba(255,255,255,0.8)">Starts with your goals and financial picture</li>
+                <li style="color:rgba(255,255,255,0.8)">Strategy, tax, and wealth aligned from day one</li>
+                <li style="color:rgba(255,255,255,0.8)">Integrated support through post-sale transition</li>
+                <li style="color:rgba(255,255,255,0.8)">Reedmark Advisors, LLC coordinates wealth deployment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Band -->
+  <div class="photo-band rv">
+    <img src="images/adobestock_135662291-min.jpeg" alt="Pittsburgh" loading="lazy">
+    <div class="photo-band-overlay">
+      <div class="photo-band-content">
+        <div class="s-label">Pittsburgh, PA &mdash; Est. 1965</div>
+        <h3>60+ years of guiding privately-held businesses through their most important decisions.</h3>
+        <p>From formation through exit, and everything in between.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- How We Engage: 4-Phase Process -->
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv">
+        <div class="s-label">How We Engage</div>
+        <h2 class="s-title">Flexible support. Constant focus on your outcome.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc">Clients engage Solenture in different ways depending on their needs and timing. Some require targeted guidance at a specific stage; others rely on us to lead the full process. You can engage Solenture for a single need &mdash; or rely on us to guide the entire exit from planning through execution.</p>
+      </div>
+      <div class="phase-steps">
+        <div class="phase-step rv rv-d1">
+          <div class="phase-num">Phase 01</div>
+          <h4>Advisory &amp; Planning</h4>
+          <p>Define your personal financial goals and required outcomes. Assess whether, when, and how a transition should occur. Quantify the role of the business in achieving your long-term objectives.</p>
+        </div>
+        <div class="phase-step rv rv-d2">
+          <div class="phase-num">Phase 02</div>
+          <h4>Value Optimization</h4>
+          <p>Identify and close the gap between current value and desired outcome. Optimize organizational structure, leadership depth, and financial profile. Implement tax-aware ownership strategies to improve net proceeds.</p>
+        </div>
+        <div class="phase-step rv rv-d3">
+          <div class="phase-num">Phase 03</div>
+          <h4>Transaction Coordination</h4>
+          <p>Serve as lead advisor and quarterback. Coordinate investment bankers, legal, and tax advisors. Evaluate offers, deal structures, and trade-offs. Maintain alignment with your strategy throughout the process.</p>
+        </div>
+        <div class="phase-step rv rv-d4">
+          <div class="phase-num">Phase 04</div>
+          <h4>Execution &amp; Transition</h4>
+          <p>Direct involvement in positioning, buyer engagement, and negotiation. Coordinate post-close wealth deployment through Reedmark Advisors, LLC. Ensure the proceeds of the sale serve your long-term personal financial plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail Split -->
+  <section class="s">
+    <div class="s-inner">
+      <div class="rv">
+        <div class="s-label">What We Do</div>
+        <h2 class="s-title">Full-spectrum exit advisory at every stage.</h2>
+        <div class="s-rule"></div>
+      </div>
+
+      <div class="svc-detail rv" style="margin-top:56px;padding-bottom:56px;border-bottom:1px solid var(--light-gray)">
+        <div>
+          <h3>Exit Readiness &amp; Value Gap Analysis</h3>
+          <p>Most business owners don&rsquo;t know what their company is actually worth to a buyer &mdash; or what it would need to be worth to meet their financial goals. We close that gap.</p>
+          <p>Solenture conducts a structured assessment of your business&rsquo;s current state, identifies the factors most likely to affect valuation, and builds a roadmap to close the gap between where you are and where you need to be.</p>
+          <div class="cross-note">Our Business Transition Flash Audit helps identify where you stand today. Ask us about running one for your business.</div>
+        </div>
+        <ul class="svc-list">
+          <li>Business valuation and buyer-readiness assessment</li>
+          <li>Value gap identification and prioritization</li>
+          <li>EBITDA normalization and financial cleanup</li>
+          <li>Owner-dependency analysis</li>
+          <li>Operational and organizational risk review</li>
+          <li>Exit timeline and milestone planning</li>
+        </ul>
+      </div>
+
+      <div class="svc-detail rv" style="padding-top:56px;padding-bottom:56px;border-bottom:1px solid var(--light-gray)">
+        <div>
+          <h3>Transaction Advisory &amp; Coordination</h3>
+          <p>A business sale involves attorneys, accountants, investment bankers, and sometimes multiple advisors with conflicting incentives. Solenture acts as the single, owner-aligned voice in the room, keeping the strategy intact from first conversation through close.</p>
+          <p>We can support a transaction you&rsquo;ve already initiated, or engage earlier to structure the process from the start. Either way, our focus remains constant: what you keep, not just what you sell for.</p>
+        </div>
+        <ul class="svc-list">
+          <li>Transaction structuring and deal review</li>
+          <li>Advisor coordination (legal, tax, investment banking)</li>
+          <li>Letter of intent and offer evaluation</li>
+          <li>Due diligence preparation and management</li>
+          <li>Negotiation strategy and support</li>
+          <li>Buyer engagement and positioning</li>
+        </ul>
+      </div>
+
+      <div class="svc-detail rv" style="padding-top:56px">
+        <div>
+          <h3>Post-Sale Wealth Integration</h3>
+          <p>The transaction closing is not the finish line &mdash; it&rsquo;s the starting line for a different set of decisions. What you do with the proceeds in the 12 months following a sale will define your financial life for decades.</p>
+          <p>Through Reedmark Advisors, LLC, Solenture coordinates the full post-liquidity picture: tax-efficient deployment, estate and trust structures, investment strategy, and income planning. No handoff. No coordination gap. The same team that helped you sell your business helps you manage what comes next.</p>
+        </div>
+        <ul class="svc-list">
+          <li>Post-liquidity wealth strategy</li>
+          <li>Tax-efficient asset deployment</li>
+          <li>Estate and trust coordination</li>
+          <li>Investment management through Reedmark Advisors, LLC</li>
+          <li>Income and retirement planning</li>
+          <li>Family wealth and legacy planning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exit Readiness Assessment -->
+  <div class="assessment-wrap">
+    <div class="assessment-inner">
+      <div class="s-label" style="color:var(--indigo)">Exit Readiness Assessment</div>
+      <h2 class="s-title" style="color:var(--white);margin-bottom:12px">Is your business ready for a transition?</h2>
+      <p style="font-size:15px;color:rgba(255,255,255,0.5);font-weight:300;margin-bottom:36px;max-width:560px">Check every statement that applies to your situation today. The more you can confirm, the stronger your exit readiness.</p>
+
+      <div class="assessment-q"><input type="checkbox" id="q1" onchange="updateScore()"><label for="q1">I know the approximate fair market value of my business and what a buyer would pay today.</label></div>
+      <div class="assessment-q"><input type="checkbox" id="q2" onchange="updateScore()"><label for="q2">My business can operate effectively without my day-to-day involvement.</label></div>
+      <div class="assessment-q"><input type="checkbox" id="q3" onchange="updateScore()"><label for="q3">I know how much I need from a sale to meet my personal retirement and financial goals.</label></div>
+      <div class="assessment-q"><input type="checkbox" id="q4" onchange="updateScore()"><label for="q4">My financials are clean, well-documented, and would hold up to buyer due diligence.</label></div>
+      <div class="assessment-q"><input type="checkbox" id="q5" onchange="updateScore()"><label for="q5">I have examined the pros and cons of selling to a third party versus family or management.</label></div>
+      <div class="assessment-q"><input type="checkbox" id="q6" onchange="updateScore()"><label for="q6">I have a succession plan in place for key personnel and ownership continuity.</label></div>
+      <div class="assessment-q"><input type="checkbox" id="q7" onchange="updateScore()"><label for="q7">My estate plan reflects what should happen to my business interest upon my death or incapacity.</label></div>
+      <div class="assessment-q"><input type="checkbox" id="q8" onchange="updateScore()"><label for="q8">I have a clear target timeline for when I want to begin a transition process.</label></div>
+
+      <div class="assessment-score" id="scoreBox">
+        <h4 id="scoreTitle">Your Exit Readiness</h4>
+        <div class="score-bar"><div class="score-fill" id="scoreFill" style="width:0%"></div></div>
+        <p id="scoreText"></p>
+        <a class="btn-primary" onclick="go('contact')" style="display:inline-flex;cursor:pointer">Talk to Solenture About Your Score &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Studies (Placeholders) -->
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv">
+        <div class="s-label">Client Outcomes</div>
+        <h2 class="s-title">The proof is in the outcomes, not the process.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc">Every engagement is different. Every outcome is personal. Below are representative examples of the kinds of situations Solenture has navigated with clients.</p>
+      </div>
+      <div class="case-grid">
+        <div class="case-card rv rv-d1">
+          <div class="case-label">Family Business Transition</div>
+          <h4>Privately-Held Manufacturer &mdash; Pittsburgh Region</h4>
+          <p>Second-generation owner approaching retirement with no clear successor. Solenture conducted a full exit readiness review, identified key-man dependency as the primary value risk, implemented a leadership transition plan, and ultimately positioned the business for a management buyout at a valuation significantly above the owner&rsquo;s initial expectations.</p>
+          <p class="case-placeholder">[Case study detail &mdash; to be provided by client]</p>
+        </div>
+        <div class="case-card rv rv-d2">
+          <div class="case-label">Third-Party Sale</div>
+          <h4>Professional Services Firm &mdash; Mid-Atlantic</h4>
+          <p>Owner had received an unsolicited acquisition offer and engaged Solenture to evaluate the structure and represent their interests. Through transaction advisory and coordinated legal and tax counsel, Solenture helped the client improve deal terms and negotiate post-close earn-out protections that added meaningful value to the final outcome.</p>
+          <p class="case-placeholder">[Case study detail &mdash; to be provided by client]</p>
+        </div>
+        <div class="case-card rv rv-d3">
+          <div class="case-label">Post-Liquidity Wealth Planning</div>
+          <h4>Business Owner &mdash; Healthcare Services</h4>
+          <p>Following the sale of a multi-location healthcare services business, Solenture &mdash; in coordination with Reedmark Advisors, LLC &mdash; developed a comprehensive post-liquidity wealth plan. The integrated approach addressed tax-efficient deployment of sale proceeds, estate structure updates, and a long-term investment strategy aligned with the owner&rsquo;s retirement and legacy goals.</p>
+          <p class="case-placeholder">[Case study detail &mdash; to be provided by client]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-info rv">
+        <div class="s-label">Start the Conversation</div>
+        <h2 class="s-title">Your exit is the most important deal you&rsquo;ll ever do.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc" style="max-width:none">The best time to engage Solenture is before you need us &mdash; ideally 2&ndash;3 years before a planned transition, but we can add value at any stage. If you&rsquo;ve received an offer, are thinking about a timeline, or just want to understand where you stand, let&rsquo;s talk.</p>
+        <div style="margin-top:32px">
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>412-281-5472</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>info@solenture.com</div>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+          <input type="hidden" name="_subject" value="Business Brokerage Inquiry &mdash; Solenture.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>Company / Organization</label><input type="text" name="company"></div>
+          <div class="form-group"><label>Where Are You in the Process?</label>
+            <select name="stage">
+              <option value="">Select&hellip;</option>
+              <option>Just starting to think about an exit (2+ years out)</option>
+              <option>Actively planning a transition (1&ndash;2 years)</option>
+              <option>Have received an offer or are in discussions</option>
+              <option>Recently sold &mdash; need post-sale wealth planning</option>
+              <option>Not sure &mdash; let&rsquo;s talk</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Tell Us About Your Situation</label><textarea name="message"></textarea></div>
+          <button type="submit" class="form-submit">Request a Conversation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- ═══════════════ END BUSINESS BROKERAGE ═══════════════ -->
+
+<!-- ═══════════════ TEAM ═══════════════ -->
+<div class="page" id="page-team">
+  <div class="page-hero" style="padding:160px 56px 100px;">
+    <div class="page-hero-img"><img src="images/adobestock_288911729-min.jpeg" alt=""></div>
+    <div class="page-hero-content rv"><div class="s-label">Our Team</div>
+    <h1 class="s-title" style="font-size:clamp(32px,4vw,48px);color:var(--white)">Deep expertise. Longstanding relationships. One team.</h1>
+    <div class="s-rule"></div>
+    <p class="s-desc" style="color:rgba(255,255,255,0.65)">Solenture&rsquo;s team brings together more than 100 combined years of experience across financial services, executive benefits, management consulting, and wealth management &mdash; so every client has access to the right expert, every time.</p></div>
+  </div>
+
+  <section class="s">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Leadership</div>
+      <h2 class="s-title">The partners behind Solenture.</h2>
+      <div class="s-rule"></div></div>
+      <div class="team-grid">
+        <div class="team-card rv rv-d1" onclick="openBio(0)"><div class="team-photo-wrap"><img class="team-photo" src="images/steve-profile-pic.jpg" alt="Steven C. Price" loading="lazy"></div><div class="t-name">Steven C. Price</div><div class="t-title">CEO / Member</div></div>
+        <div class="team-card rv rv-d2" onclick="openBio(1)"><div class="team-photo-wrap"><img class="team-photo" src="images/michael-profile-pic__1_.jpg" alt="Michael L. DiIanni" loading="lazy"></div><div class="t-name">Michael L. DiIanni</div><div class="t-title">COO / Member</div></div>
+        <div class="team-card rv rv-d3" onclick="openBio(2)"><div class="team-photo-wrap"><img class="team-photo" src="images/vince-2.jpg" alt="Vincent E. Zullo" loading="lazy"></div><div class="t-name">Vincent E. Zullo</div><div class="t-title">Executive VP / Member</div></div>
+        <div class="team-card rv rv-d4" onclick="openBio(3)"><div class="team-photo-wrap"><img class="team-photo" src="images/cropped-resized-Pascazio_Tony_431--36743-Retouched__1_.jpg" alt="Anthony J. Pascazio" loading="lazy"></div><div class="t-name">Anthony J. Pascazio</div><div class="t-title">Executive VP / Member</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Consulting &amp; Support</div>
+      <h2 class="s-title">The depth behind every engagement.</h2>
+      <div class="s-rule"></div>
+      <p class="s-desc">Our consulting and support team brings specialized expertise across benefits administration, financial planning, retirement plan consulting, and more.</p></div>
+      <div class="support-grid" style="margin-top:40px">
+        <div class="support-name rv">James Farley, CPC, QPA, AIF</div>
+        <div class="support-name rv">Maria Fattore</div>
+        <div class="support-name rv">David C. Fiore</div>
+        <div class="support-name rv">Chase W. Fisher</div>
+        <div class="support-name rv">Bilal A. Hawili</div>
+        <div class="support-name rv">Janet P. Hilson, ALMI, ACS</div>
+        <div class="support-name rv">Jonathan S. Hower</div>
+        <div class="support-name rv">Cooper S. Kann</div>
+        <div class="support-name rv">Jo McEwen</div>
+        <div class="support-name rv">Janet E. Rebhun, FLMI, ACS, AIAA, AIRC</div>
+        <div class="support-name rv">Travis E. Sollinger, CFP</div>
+        <div class="support-name rv">Bill Virgi</div>
+        <div class="support-name rv">Raymond B. White</div>
+        <div class="support-name rv">Tess Zentarsky</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-info rv">
+        <div class="s-label">Work With Us</div>
+        <h2 class="s-title">Your goals are our goals.</h2>
+        <div class="s-rule"></div>
+        <p class="s-desc" style="max-width:none">We pride ourselves on longstanding relationships and our steadfast effort to apply the Benefits of Innovative Thinking&reg; to every facet of our firm.</p>
+        <div style="margin-top:32px">
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>412-281-5472</div>
+          <div class="cta-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>info@solenture.com</div>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+          <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+          <div class="form-group"><label>I'm Interested In&hellip;</label><select name="interest"><option value="">Select&hellip;</option><option>Business Consulting / Exit Planning</option><option>Total Rewards &amp; Compensation</option><option>Wealth Management</option><option>Not sure — let's talk</option></select></div>
+          <div class="form-group"><label>Tell Us Briefly About Your Situation</label><textarea name="message"></textarea></div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Team Modal -->
+<div class="modal-bg" id="bioModal" onclick="closeBio(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeBio()">&times;</button>
+    <div class="modal-header"><img class="modal-img" id="mImg" src="" alt=""><div><div class="modal-name" id="mName"></div><div class="modal-role" id="mRole"></div></div></div>
+    <div class="modal-bio" id="mBio"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<div class="page" id="page-contact">
+  <div class="contact-split">
+    <div class="contact-left">
+      <div style="position:absolute;inset:0;opacity:0.08"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=60" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="position:relative;z-index:1">
+      <div class="s-label">Contact</div>
+      <h2>The right conversation starts here.</h2>
+      <p>Whether you have a specific need or just want to explore what&rsquo;s possible, our team is ready to listen. There&rsquo;s no obligation &mdash; just a genuine conversation about where you are and where you want to go.</p>
+      <div class="c-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="c-label">Phone</div><div class="c-value"><a href="tel:4122815472">412-281-5472</a></div></div></div>
+      <div class="c-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="c-label">Email</div><div class="c-value">info@solenture.com</div></div></div>
+      <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08)">
+        <div class="c-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="c-label">Pittsburgh, PA &mdash; Headquarters</div><div class="c-value">585 Epsilon Drive, Pittsburgh, PA 15238</div></div></div>
+        <div class="c-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="c-label">Red Bank, NJ</div><div class="c-value">320 Broad Street, 1st Floor, Red Bank, NJ 07701</div></div></div>
+        <div class="c-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="c-label">Somerville, NJ</div><div class="c-value">92 East Main Street, Suite 203B, Somerville, NJ 08876</div></div></div>
+      </div>
+    </div>
+    </div>
+    <div class="contact-right">
+      <h3>Send us a message</h3>
+      <p>We&rsquo;ll respond within one business day.</p>
+      <form action="https://formsubmit.co/info@solenture.com" method="POST">
+        <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+        <div class="form-row"><div class="form-group"><label>First Name</label><input type="text" name="first_name" required></div><div class="form-group"><label>Last Name</label><input type="text" name="last_name" required></div></div>
+        <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"></div>
+        <div class="form-group"><label>Company / Organization</label><input type="text" name="company"></div>
+        <div class="form-group"><label>I&rsquo;m Interested In&hellip;</label><select name="interest"><option value="">Select&hellip;</option><option>Business Consulting / Exit Planning</option><option>Total Rewards &amp; Compensation</option><option>Wealth Management</option><option>Not sure &mdash; let&rsquo;s talk</option></select></div>
+        <div class="form-group"><label>Tell Us About Your Situation</label><textarea name="message"></textarea></div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><img src="images/logo-black.png" alt="Solenture" style="height:22px;margin-bottom:12px;filter:brightness(0) invert(1);opacity:0.9;"><p class="footer-tagline">Guiding privately-held businesses to maximize value and converting that value into personal private wealth since 1965.</p></div>
+      <div class="footer-col"><h5>Services</h5><a onclick="go('consulting')">Business Consulting</a><a onclick="go('brokerage')">Business Brokerage</a><a onclick="go('consulting')">Exit &amp; Transition Planning</a><a onclick="go('total-rewards')">Total Rewards</a><a onclick="go('total-rewards')">C-Suite&reg; Executive Office</a><a onclick="go('wealth')">Wealth Management</a><a onclick="go('wealth')">Executive Family Office</a></div>
+      <div class="footer-col"><h5>Company</h5><a onclick="go('about')">Our History</a><a onclick="go('team')">Our Team</a><a onclick="go('contact')">Contact</a><a onclick="go('reedmark')">Reedmark Advisors, LLC</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="tel:4122815472">412-281-5472</a>info@solenture.com<a>585 Epsilon Drive</a><a>Pittsburgh, PA 15238</a></div>
+    </div>
+    <div class="footer-legal">
+      <p>Securities offered through Integrity Alliance, LLC, Member <a href="https://www.sipc.org/" target="_blank" rel="noopener">SIPC</a>. Integrity Wealth is a marketing name for Integrity Alliance, LLC. Investment Advisory services offered through Reedmark Advisors, LLC. Solenture, LLC and Reedmark Advisors, LLC are not affiliated with Integrity Wealth.</p>
+      <p style="margin-top:6px">Tax and Legal services are not offered through Integrity Wealth. This site is published for residents of the United States only. Representatives may only conduct business with residents of the states and jurisdictions in which they are properly registered. Therefore, a response to a request for information may be delayed until appropriate registration is obtained or exemption from registration is determined. Not all services referenced on this site are available in every state and through every advisor listed.</p>
+      <p style="margin-top:6px"><a href="20260205_formcrs_173760_reedmark_advisors_llc.pdf" target="_blank" rel="noopener">FORM CRS</a> &nbsp;|&nbsp; Check the background of this firm on <a href="https://brokercheck.finra.org/" target="_blank" rel="noopener">FINRA's BrokerCheck</a></p>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Solenture, LLC. All rights reserved.</span><span><a href="#" style="color:rgba(255,255,255,0.25)">Privacy Policy</a></span></div>
+  </div>
+</footer>
+
+<script>
+const bios=[
+{n:"Steven C. Price",r:"CEO / Member",img:"images/steve-profile-pic.jpg",bio:"<p>Steve joined Solenture in 1984 and began the process of transforming the firm into a \u201cSolutions Venture.\u201d Central to Solenture\u2019s approach is the ability to understand each client\u2019s unique goals and objectives and develop solutions to meet their specific needs.</p><p>Over the years, Steve has pioneered the development of various programs extending to executive benefits plans, succession planning, C-Suite\u00ae services and total rewards, strategic planning, management compensation and communications, wealth transfer, and exit planning.</p><p>Steve has been quoted in and has authored articles for Barron\u2019s, Business Week, CFO Magazine, Directorship, Journal of Compensation and Benefits, Journal of Deferred Compensation, and various national and local publications.</p>"},
+{n:"Michael L. DiIanni",r:"COO / Member",img:"images/michael-profile-pic__1_.jpg",bio:"<p>Michael joined Solenture in 2015 as Senior Managing Director of Strategic Ventures. Prior to joining Solenture, his career focused on innovative development and large-scale transformations in Fortune 500 companies and privately-held entities.</p><p>As Chief Operating Officer, Michael oversees the day-to-day management of the firm while serving as a driving force behind client communications. He has held leadership roles across finance, shared services, supply chain, human resources, and project management.</p><p>Michael has been responsible for the development and execution of global strategy to maximize short and long-term firm-wide value at organizations including Dominion Resources, Peoples Natural Gas Company LLC, and UPMC.</p>"},
+{n:"Vincent E. Zullo",r:"Executive VP / Member",img:"images/vince-2.jpg",bio:"<p>Vincent joined Solenture in 2008, centering his practice on family security, business transition planning, asset management, and estate and wealth transfer planning.</p><p>From 2015 through 2022, Vincent also served as President and CFO of his family\u2019s business, Audio Energy. The company experienced exponential growth, becoming the largest independently-owned micro-cell packaging and distributor worldwide with customers ranging from local distributors to Fortune 100 box stores.</p><p>Vincent brings over 25 years of financial services experience combined with hands-on operating leadership, a rare combination that makes him uniquely skilled at advising business-owning families.</p>"},
+{n:"Anthony J. Pascazio",r:"Executive VP / Member | Founder, Reedmark Advisors, LLC",img:"images/cropped-resized-Pascazio_Tony_431--36743-Retouched__1_.jpg",bio:"<p>Tony is the founder of Reedmark Advisors, LLC and leads the firm\u2019s retirement plan practice. He holds the CLU designation from The American College and the AIF designation from the University of Pittsburgh\u2019s Katz School of Business.</p><p>With a 45+ year career in the retirement plan business, Tony is one of a small number of consultants who began designing retirement plans in the pre-ERISA era. His commitment to the industry has earned him recognition as one of the nation\u2019s leading voices on retirement plan design.</p><p>Tony has spoken extensively on topics ranging from the effectiveness of 401(k) plans as retirement vehicles to the rebirth of traditional pension plans. His reputation, experience, and network are cornerstones of Solenture\u2019s current and future growth.</p>"}
+];
+
+function go(p){
+  document.querySelectorAll(".page").forEach(function(e){e.classList.remove("active")});
+  document.getElementById("page-"+p).classList.add("active");
+  window.scrollTo({top:0,behavior:"instant"});
+  document.querySelectorAll(".nav-links a[data-p]").forEach(function(a){
+    a.classList.toggle("active",a.dataset.p===p);
+  });
+  var drop=document.querySelector(".nav-drop-trigger");
+  if(drop){
+    var group=drop.dataset.pGroup.split(",");
+    drop.classList.toggle("active",group.indexOf(p)!==-1);
+  }
+  var logo=document.getElementById("navLogo");
+  if(p==="reedmark"){
+    logo.src="images/reedmark_logo.png";
+    logo.alt="Reedmark Advisors, LLC";
+    logo.style.height="45px";
+  } else {
+    logo.src="images/logo-black.png";
+    logo.alt="Solenture";
+    logo.style.height="28px";
+  }
+  history.pushState(null,"",p==="home"?"/":"#"+p);
+  setTimeout(initRv,100);
+  if(p==="home") setTimeout(initCounters,300);
+}
+
+window.addEventListener("load",function(){
+  var h=location.hash.replace("#","");
+  if(h&&document.getElementById("page-"+h)) go(h);
+});
+window.addEventListener("popstate",function(){
+  var h=location.hash.replace("#","")||"home";
+  if(document.getElementById("page-"+h)) go(h);
+});
+
+function toggleMob(){
+  document.getElementById("ham").classList.toggle("open");
+  var m=document.getElementById("mob");
+  m.classList.toggle("visible");
+  document.body.style.overflow=m.classList.contains("visible")?"hidden":"";
+}
+
+window.addEventListener("scroll",function(){
+  document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>20);
+});
+
+function initRv(){
+  var o=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add("vis");}
+    });
+  },{threshold:0.1,rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".rv:not(.vis)").forEach(function(el){o.observe(el)});document.querySelectorAll(".s-rule:not(.vis)").forEach(function(el){o.observe(el)});
+}
+initRv();
+
+function initCounters(){
+  document.querySelectorAll(".h-stat-num[data-t]").forEach(function(c){
+    var t=parseInt(c.dataset.t);
+    var s=c.dataset.s||"";
+    var cur=0;
+    var d=1800;
+    var step=t/(d/16);
+    function up(){
+      cur+=step;
+      if(cur>=t){c.textContent=t+s;c.classList.add('counted');return;}
+      c.textContent=Math.floor(cur)+s;
+      requestAnimationFrame(up);
+    }
+    var obs=new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){up();obs.disconnect();}
+    });
+    obs.observe(c);
+  });
+}
+initCounters();
+
+function showTab(id,btn){
+  document.querySelectorAll(".tab-content").forEach(function(t){t.classList.remove("active")});
+  document.querySelectorAll(".tab-btn").forEach(function(b){b.classList.remove("active")});
+  document.getElementById(id).classList.add("active");
+  btn.classList.add("active");
+  setTimeout(initRv,50);
+}
+
+function openBio(i){
+  var b=bios[i];
+  document.getElementById("mImg").src=b.img;
+  document.getElementById("mName").textContent=b.n;
+  document.getElementById("mRole").textContent=b.r;
+  document.getElementById("mBio").innerHTML=b.bio;
+  document.getElementById("bioModal").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+
+function closeBio(e){
+  if(e&&e.target!==document.getElementById("bioModal")&&!e.target.classList.contains("modal-close")) return;
+  document.getElementById("bioModal").classList.remove("open");
+  document.body.style.overflow="";
+}
+
+document.addEventListener("keydown",function(e){if(e.key==="Escape") closeBio();});
+
+function updateScore(){
+  var total=8;
+  var checked=document.querySelectorAll('.assessment-q input:checked').length;
+  var box=document.getElementById('scoreBox');
+  var fill=document.getElementById('scoreFill');
+  var title=document.getElementById('scoreTitle');
+  var text=document.getElementById('scoreText');
+  if(checked===0){box.style.display='none';return;}
+  box.style.display='block';
+  var pct=Math.round((checked/total)*100);
+  fill.style.width=pct+'%';
+  if(checked<=2){
+    title.textContent='Early Stage ('+checked+' of 8)';
+    text.textContent='There are significant gaps to address before pursuing a transaction. The good news: early planning creates the most value. Now is exactly the right time to engage Solenture.';
+  } else if(checked<=5){
+    title.textContent='Progressing ('+checked+' of 8)';
+    text.textContent='You have a foundation in place but key areas need attention before a transaction will yield optimal results. Solenture can help identify and close the remaining gaps.';
+  } else if(checked<=7){
+    title.textContent='Strong Readiness ('+checked+' of 8)';
+    text.textContent='Your business is well-positioned for a transition. A focused engagement with Solenture can help optimize the remaining factors and ensure the process itself delivers the outcome you deserve.';
+  } else {
+    title.textContent='High Readiness (8 of 8)';
+    text.textContent='You have done exceptional preparation. The question now is execution. Solenture can help ensure the transaction process and post-sale wealth plan fully capitalize on your position.';
+  }
+}
+
+</script>
+
+</body>
+</html>
+
+<!-- deployed 20260316012730 -->
