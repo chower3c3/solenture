@@ -999,8 +999,7 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
 <div class="page" id="page-reedmark">
   <section class="s" style="padding-top:180px;min-height:80vh;display:flex;align-items:center">
     <div class="s-inner" style="max-width:680px">
-      <div class="s-label">Reedmark Advisors, LLC</div>
-      <h1 class="s-title" style="font-size:clamp(28px,3.5vw,44px)">A Solenture Company</h1>
+      <img src="images/reedmark_logo.png" alt="Reedmark Advisors, LLC — A Solenture Company" style="height:60px;width:auto;display:block;margin-bottom:8px">
       <div class="s-rule"></div>
       <p class="s-desc" style="max-width:none">Reedmark Advisors, LLC is an SEC-registered investment advisory firm. In 2024, Reedmark became a wholly-owned subsidiary of Solenture, LLC &mdash; every Reedmark advisor is a Solenture W-2 employee, so clients get one integrated team rather than two separate firms to coordinate with.</p>
       <p class="s-desc" style="max-width:none;margin-top:16px">Reedmark provides two core services: qualified retirement plan consulting, and personal wealth &amp; investment advisory.</p>
@@ -1432,16 +1431,6 @@ function go(p){
   if(drop){
     var group=drop.dataset.pGroup.split(",");
     drop.classList.toggle("active",group.indexOf(p)!==-1);
-  }
-  var logo=document.getElementById("navLogo");
-  if(p==="reedmark"){
-    logo.src="images/reedmark_logo.png";
-    logo.alt="Reedmark Advisors, LLC";
-    logo.style.height="45px";
-  } else {
-    logo.src="images/Solenture_Logo.svg";
-    logo.alt="Solenture";
-    logo.style.height="65px";
   }
   history.pushState(null,"",p==="home"?"/":"#"+p);
   setTimeout(initRv,100);
