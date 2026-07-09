@@ -1334,6 +1334,8 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
       <div class="assessment-q"><input type="checkbox" id="q6" onchange="updateScore()"><label for="q6">I have a succession plan in place for key personnel and ownership continuity.</label></div>
       <div class="assessment-q"><input type="checkbox" id="q7" onchange="updateScore()"><label for="q7">My estate plan reflects what should happen to my business interest upon my death or incapacity.</label></div>
       <div class="assessment-q"><input type="checkbox" id="q8" onchange="updateScore()"><label for="q8">I have a clear target timeline for when I want to begin a transition process.</label></div>
+	  <div class="assessment-q"><input type="checkbox" id="q9" onchange="updateScore()"><label for="q9">I have minimized the customer concentration and other risks.</label></div>
+      <div class="assessment-q"><input type="checkbox" id="q10" onchange="updateScore()"><label for="q10">I have been and continue to grow.</label></div>
 
       <div class="assessment-score" id="scoreBox">
         <h4 id="scoreTitle">Your Exit Readiness</h4>
@@ -1671,7 +1673,7 @@ function closeBio(e){
 document.addEventListener("keydown",function(e){if(e.key==="Escape") closeBio();});
 
 function updateScore(){
-  var total=8;
+  var total=10;
   var checked=document.querySelectorAll('.assessment-q input:checked').length;
   var box=document.getElementById('scoreBox');
   var fill=document.getElementById('scoreFill');
@@ -1682,16 +1684,16 @@ function updateScore(){
   var pct=Math.round((checked/total)*100);
   fill.style.width=pct+'%';
   if(checked<=2){
-    title.textContent='Early Stage ('+checked+' of 8)';
+    title.textContent='Early Stage ('+checked+' of 10)';
     text.textContent='There are significant gaps to address before pursuing a transaction. The good news: early planning creates the most value. Now is exactly the right time to engage Solenture.';
   } else if(checked<=5){
-    title.textContent='Progressing ('+checked+' of 8)';
+    title.textContent='Progressing ('+checked+' of 10)';
     text.textContent='You have a foundation in place but key areas need attention before a transaction will yield optimal results. Solenture can help identify and close the remaining gaps.';
-  } else if(checked<=7){
-    title.textContent='Strong Readiness ('+checked+' of 8)';
+  } else if(checked<=8){
+    title.textContent='Strong Readiness ('+checked+' of 10)';
     text.textContent='Your business is well-positioned for a transition. A focused engagement with Solenture can help optimize the remaining factors and ensure the process itself delivers the outcome you deserve.';
   } else {
-    title.textContent='High Readiness (8 of 8)';
+    title.textContent='High Readiness ('+checked+' of 10)';
     text.textContent='You have done exceptional preparation. The question now is execution. Solenture can help ensure the transaction process and post-sale wealth plan fully capitalize on your position.';
   }
 }
