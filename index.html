@@ -504,7 +504,7 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
         <div class="svc-card rv rv-d1" onclick="go('consulting')">
           <h3>Consulting</h3>
           <p>Strategic counsel for business owners navigating growth, succession, and transition from day-to-day operations to your ultimate exit.</p>
-          <ul><li>Business Transition &amp; Exit Planning</li><li>Strategic Planning</li><li>Management Consulting</li><li>Succession Planning</li><li>Business Brokerage</li></ul>
+          <ul><li>Business Transition &amp; Exit Planning</li><li>Strategic Planning</li><li>Management Consulting</li><li>Succession Planning</li><li><a onclick="event.stopPropagation();go('brokerage')" style="color:var(--indigo);text-decoration:underline">Business Brokerage</a></li></ul>
           <div class="svc-link">Explore Consulting <span>&rarr;</span></div>
         </div>
         <div class="svc-card rv rv-d2" onclick="go('total-rewards')">
@@ -516,8 +516,7 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
         <div class="svc-card rv rv-d3" onclick="go('wealth')">
           <h3>Wealth Management</h3>
           <p>Comprehensive wealth strategies for business owners, executives, and their families built to protect and grow what you&rsquo;ve worked to build.</p>
-          <ul><li>Financial &amp; Estate Planning</li><li>Asset Management</li><li>Insurance Solutions</li><li>Executive &amp; Multi-Family Office</li><li>Business Growth and Brokerage</li></ul>
-          <div class="svc-link">Explore Wealth Management <span>&rarr;</span></div>
+		  <ul><li>Financial &amp; Estate Planning</li><li>Asset Management</li><li>Insurance Solutions</li><li>Executive &amp; Multi-Family Office</li><li><a onclick="event.stopPropagation();go('brokerage')" style="color:var(--indigo);text-decoration:underline">Business Growth and Brokerage</a></li></ul>          <div class="svc-link">Explore Wealth Management <span>&rarr;</span></div>
         </div>
       </div>
     </div>
@@ -732,7 +731,8 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
             <p>Solenture works with business owners well in advance of a transition event to maximize enterprise value, align business and personal financial goals, and execute a plan that reflects intentions and desires.</p>
             <div class="pull-quote">&ldquo;We help families and business owners align their private needs with their company&rsquo;s performance, with a dedicated focus on increasing long-term value.&rdquo;</div>
             <div class="cross-note">Exit planning and post-liquidity wealth management work in tandem. Clients often engage our Wealth Management team concurrently to ensure the proceeds of a business sale are deployed in alignment with long-term personal financial objectives.</div>
-          </div>
+			<div class="cross-note">For business owners actively preparing for a sale, our dedicated <a onclick="go('brokerage')" style="color:var(--indigo);text-decoration:underline">Business Brokerage</a> practice manages positioning, buyer engagement, and negotiation from first conversation through closing.</div>
+		  </div>
           <div class="rv rv-d2">
             <ul class="svc-list">
               <li>Business valuation and value-gap analysis</li>
@@ -930,7 +930,9 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
       <h2 class="s-title">Wealth management for people who built their own.</h2>
       <div class="s-rule"></div>
       <p class="s-desc" style="max-width:720px">Managing wealth goes well beyond investing. For business owners and executives, it means simultaneously coordinating business income, equity value, estate exposure, insurance coverage, and family goals in alignment. That&rsquo;s the kind of complexity Solenture is built for.</p>
-      <p class="s-desc" style="max-width:720px;margin-top:12px">Through <a onclick="go('reedmark')" style="color:var(--indigo);text-decoration:underline">Reedmark Advisors, LLC</a>, a Solenture wholly-owned subsidiary, our team offers registered investment advisory services alongside our broader planning practice, giving clients a fully integrated relationship without the friction of coordinating multiple firms.</p></div>
+      <p class="s-desc" style="max-width:720px;margin-top:12px">Through <a onclick="go('reedmark')" style="color:var(--indigo);text-decoration:underline">Reedmark Advisors, LLC</a>, a Solenture wholly-owned subsidiary, our team offers registered investment advisory services alongside our broader planning practice, giving clients a fully integrated relationship without the friction of coordinating multiple firms.</p>
+	  <p class="s-desc" style="max-width:720px;margin-top:12px">For clients preparing for a liquidity event, our <a onclick="go('brokerage')" style="color:var(--indigo);text-decoration:underline">Business Brokerage</a> practice ensures the transaction itself is structured and timed to align with the wealth plan we build together &mdash; one relationship, from the sale through what comes after.</p>
+	  </div>
 
       <div class="serve-grid" style="margin-top:64px">
         <div class="serve-item rv rv-d1"><h4>Financial &amp; Estate Planning</h4><p>We help clients develop a clear vision for the use and distribution of their wealth. From tax-efficient estate structures to trust strategies and charitable planning, Solenture coordinates the full picture.</p></div>
