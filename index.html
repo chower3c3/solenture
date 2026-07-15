@@ -105,13 +105,15 @@ nav.scrolled{box-shadow:0 1px 0 var(--light-gray)}
 .s-desc{font-size:16px;line-height:1.8;color:var(--dark-gray);font-weight:300;max-width:600px}
 .s-rule{width:48px;height:1px;background:var(--indigo);margin:20px 0}
 .img-tile{border-radius:4px;overflow:hidden}
-.img-tile-photo{width:100%;aspect-ratio:16/10;overflow:hidden}
-.img-tile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.img-tile-photo{position:relative;width:100%;height:240px;overflow:hidden}
+.img-tile-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.img-tile-photo::after{content:"";position:absolute;inset:0;background:var(--navy);opacity:0.35;transition:opacity 0.3s ease;pointer-events:none}
+.img-tile:hover .img-tile-photo::after{opacity:0}
 .img-tile-text{background:var(--navy);padding:24px 28px}
 .img-tile-text h4{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--white);margin-bottom:8px}
 .img-tile-text p{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.55);font-weight:300;margin:0}
 .img-tile-text p+p{margin-top:8px}
-.tile-row-2{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.tile-row-2{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:96px}
 .tile-row-3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:32px}
 @media(max-width:1024px){.tile-row-2,.tile-row-3{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.tile-row-2,.tile-row-3{grid-template-columns:1fr}}
@@ -1015,8 +1017,8 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
         </div>
 <div class="tile-row-2">
           <div class="img-tile rv">
-            <div class="img-tile-photo"><img src="images/trust services.png" alt="Trust Services" loading="lazy"></div>
-            <div class="img-tile-text"><h4>Trust Services</h4><p>From asset ownership structure to insurance coverage to liability protection, we proactively balance risk in alignment with your wealth and your risk appetite.</p></div>
+            <div class="img-tile-photo"><img src="images/planning.png" alt="Planning" loading="lazy"></div>
+            <div class="img-tile-text"><h4>Planning</h4><p>A successful retirement and the ability to direct wealth for the benefit of others require vision and planning. Solenture helps clients develop a unique philosophy regarding wealth, then builds the plans to execute it.</p></div>
           </div>
           <div class="img-tile rv rv-d1">
             <div class="img-tile-photo"><img src="images/asset advisory.png" alt="Asset Advisory" loading="lazy"></div>
@@ -1025,16 +1027,16 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
         </div>
         <div class="tile-row-3">
           <div class="img-tile rv">
-            <div class="img-tile-photo"><img src="images/planning.png" alt="Planning" loading="lazy"></div>
-            <div class="img-tile-text"><h4>Planning</h4><p>A successful retirement and the ability to direct wealth for the benefit of others require vision and planning. Solenture helps clients develop a unique philosophy regarding wealth, then builds the plans to execute it.</p></div>
+            <div class="img-tile-photo"><img src="images/family services.png" alt="Family Services" loading="lazy"></div>
+            <div class="img-tile-text"><h4>Family Services</h4><p>Tax coordination, bill management, travel planning, family governance, and next-generation wealth education. Solenture provides the services that allow high-net-worth families to live fully without administrative burden.</p></div>
           </div>
           <div class="img-tile rv rv-d1">
             <div class="img-tile-photo"><img src="images/risk management.png" alt="Risk Management" loading="lazy"></div>
             <div class="img-tile-text"><h4>Risk Management</h4><p>From asset ownership structure to insurance coverage to liability protection, we proactively balance risk in alignment with your wealth and your risk appetite.</p><p>Consistent with our overall planning process, we recognize that every relationship is unique and that the services we provide must be tied to each client's needs, which may change as they age.</p></div>
           </div>
           <div class="img-tile rv rv-d2">
-            <div class="img-tile-photo"><img src="images/family services.png" alt="Family Services" loading="lazy"></div>
-            <div class="img-tile-text"><h4>Family Services</h4><p>Tax coordination, bill management, travel planning, family governance, and next-generation wealth education. Solenture provides the services that allow high-net-worth families to live fully without administrative burden.</p></div>
+            <div class="img-tile-photo"><img src="images/trust services.png" alt="Trust Services" loading="lazy"></div>
+            <div class="img-tile-text"><h4>Trust Services</h4><p>From asset ownership structure to insurance coverage to liability protection, we proactively balance risk in alignment with your wealth and your risk appetite.</p></div>
           </div>
         </div>
     </div>
