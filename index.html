@@ -221,6 +221,16 @@ nav.scrolled{box-shadow:0 1px 0 var(--light-gray)}
 .tab-btn:hover{color:var(--navy)}
 .tab-content{display:none}.tab-content.active{display:block}
 
+/* ── PHOTOBOX (Consulting / Total Rewards / Wealth Mgmt subsections) ── */
+.photobox{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.photobox-media{border-radius:4px;overflow:hidden}
+.photobox-media img{width:100%;height:200px;object-fit:cover;display:block}
+.photobox-caption{background:var(--navy);padding:24px 28px}
+.photobox-caption h3{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--white);margin-bottom:10px}
+.photobox-quote{font-family:var(--serif);font-size:15px;font-style:italic;line-height:1.6;color:rgba(255,255,255,0.75);border-left:2px solid rgba(255,255,255,0.35);padding-left:14px}
+.photobox p{font-size:15px;line-height:1.8;color:var(--dark-gray);font-weight:300;margin-bottom:12px}
+@media(max-width:1024px){.photobox{grid-template-columns:1fr;gap:32px}}
+
 /* ── TEAM ── */
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:72px}
 .team-card{cursor:pointer}
@@ -503,10 +513,10 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
     <div class="nav-links">
       <a onclick="go('about')" data-p="about">About</a>
       <div class="nav-item-drop">
-        <div class="nav-drop-trigger" data-p-group="consulting,brokerage,total-rewards,wealth">What We Do <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="nav-drop-trigger" data-p-group="consulting,total-rewards,wealth">What We Do <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
         <div class="nav-dropdown">
           <a onclick="go('consulting')" data-p="consulting">Consulting</a>
-          <a onclick="go('brokerage')" data-p="brokerage">Business Brokerage</a>
+          <a href="/Business_Brokerage_Overview.pdf" target="_blank">Business Brokerage</a>
           <a onclick="go('total-rewards')" data-p="total-rewards">Total Rewards</a>
           <a onclick="go('wealth')" data-p="wealth">Wealth Management</a>
         </div>
@@ -522,7 +532,7 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
   <a onclick="go('about');toggleMob()">About</a>
   <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--mid-gray);margin-top:8px">What We Do</div>
   <a onclick="go('consulting');toggleMob()" style="font-size:22px">Consulting</a>
-  <a onclick="go('brokerage');toggleMob()" style="font-size:22px">Business Brokerage</a>
+  <a href="/Business_Brokerage_Overview.pdf" target="_blank" onclick="toggleMob()" style="font-size:22px">Business Brokerage</a>
   <a onclick="go('total-rewards');toggleMob()" style="font-size:22px">Total Rewards</a>
   <a onclick="go('wealth');toggleMob()" style="font-size:22px">Wealth Management</a>
   <a onclick="go('team');toggleMob()">Team</a>
@@ -799,33 +809,31 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
 
   <section class="s">
     <div class="s-inner">
-      <div class="photo-band rv" style="margin-bottom:64px;border-radius:4px;overflow:hidden;height:340px">
+      <div class="rv"><div class="s-label">Consulting Services</div>
+      <h2 class="s-title">Clarity for the decisions that shape what&rsquo;s next.</h2>
+      <div class="s-rule"></div>
+      <p class="s-desc">Whether you&rsquo;re planning a transition, sharpening strategy, or solving operational challenges, Solenture brings 60+ years of pattern recognition to every engagement &mdash; helping business owners see the path forward clearly.</p></div>
+
+      <div class="photo-band rv" style="margin-top:56px;margin-bottom:64px;border-radius:4px;overflow:hidden;height:340px">
         <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&q=80" alt="Business strategy meeting" loading="lazy">
         <div class="photo-band-overlay">
           <div class="photo-band-content">
             <h3>Strategic counsel for your most important decisions.</h3>
-            <p>From growth planning to exit execution, we bring 60+ years of pattern recognition to every engagement. By helping companies improve performance, opportunities emerge that might otherwise have been ignored.</p>
           </div>
         </div>
       </div>
-      <div class="tab-nav">
-        <button class="tab-btn active" onclick="showTab('t-exit',this)">Transition &amp; Exit Planning</button>
-        <button class="tab-btn" onclick="showTab('t-strat',this)">Strategic Planning</button>
-        <button class="tab-btn" onclick="showTab('t-mgmt',this)">Management Consulting</button>
-      </div>
 
-      <div class="tab-content active" id="t-exit">
-        <div class="svc-detail">
-          <div class="rv">
-            <div class="s-label">Transition &amp; Exit Planning</div>
-            <h3>Your exit is the most important deal you&rsquo;ll ever do.</h3>
-            <p>Most business owners spend years building their company but very little time preparing for the transition that will ultimately define their financial legacy. Whether you&rsquo;re thinking about succession to family, a management buyout, or a third-party sale, the planning you do today determines the outcome you achieve.</p>
-            <p>Solenture works with business owners well in advance of a transition event to maximize enterprise value, align business and personal financial goals, and execute a plan that reflects intentions and desires.</p>
-            <div class="pull-quote">&ldquo;We help families and business owners align their private needs with their company&rsquo;s performance, with a dedicated focus on increasing long-term value.&rdquo;</div>
-            <div class="cross-note">Exit planning and post-liquidity wealth management work in tandem. Clients often engage our <a onclick="go('wealth')" style="color:var(--indigo);text-decoration:underline">Wealth Management</a> team concurrently to ensure the proceeds of a business sale are deployed in alignment with long-term personal financial objectives.</div>
-			<div class="cross-note">For business owners actively preparing for a sale, our dedicated <a onclick="go('brokerage')" style="color:var(--indigo);text-decoration:underline">Business Brokerage</a> practice manages positioning, buyer engagement, and negotiation from first conversation through closing.</div>
-		  </div>
-          <div class="rv rv-d2">
+      <div style="margin-top:0">
+        <div class="photobox rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
+          <div class="photobox-media">
+            <img src="images/transition.png" alt="Transition &amp; Exit Planning" loading="lazy">
+            <div class="photobox-caption">
+				<h3>Transition &amp; Exit Planning</h3>
+				<div class="photobox-quote">&ldquo;We help families and business owners align their private needs with their company&rsquo;s performance, with a dedicated focus on increasing long-term value.&rdquo;</div>
+			</div>
+          </div>
+          <div>
+            <p>Most business owners spend years building their company but very little time preparing for the transition that will define their financial legacy. Solenture works with owners well before a transition event to maximize enterprise value, align business and personal financial goals, and execute a plan that reflects their intentions.</p>
             <ul class="svc-list">
               <li>Business valuation and value-gap analysis</li>
               <li>Ownership succession planning</li>
@@ -835,20 +843,20 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
               <li>Exit timeline and milestone planning</li>
               <li>Personal wealth alignment post-exit</li>
             </ul>
+            <div class="cross-note">For business owners actively preparing for a sale, our dedicated <a href="/Business_Brokerage_Overview.pdf" target="_blank" style="color:var(--indigo);text-decoration:underline">Business Brokerage</a> practice manages positioning, buyer engagement, and negotiation from first conversation through closing.</div>
           </div>
         </div>
-      </div>
 
-      <div class="tab-content" id="t-strat">
-        <div class="svc-detail">
-          <div class="rv">
-            <div class="s-label">Strategic Planning</div>
-            <h3>Vision is only valuable when it becomes a plan.</h3>
-            <p>Running a business well is demanding work. It can be hard to think strategically when you&rsquo;re deep in operations. Solenture acts as a strategic partner, helping you define the vision, build the right strategies, and stay accountable to the goals that matter most.</p>
-            <p>We bring an outside perspective, structured process, and 60+ years of pattern recognition to help you identify opportunities and obstacles before they become urgent.</p>
-            <div class="pull-quote">&ldquo;We help our employer clients determine the vision, build the right strategies, and stay focused on any needed changes.&rdquo;</div>
-          </div>
-          <div class="rv rv-d2">
+        <div class="photobox rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
+          <div class="photobox-media">
+            <img src="images/strategic_planning.png" alt="Strategic Planning" loading="lazy">
+            <div class="photobox-caption">
+			<h3>Strategic Planning</h3>
+            <div class="photobox-quote">&ldquo;We help our employer clients determine the vision, build the right strategies, and stay focused on any needed changes.&rdquo;</div>
+			</div>
+		  </div>
+          <div>
+            <p>Running a business well is demanding work. It can be hard to think strategically when you&rsquo;re deep in operations. Solenture acts as a strategic partner, bringing an outside perspective and 60+ years of pattern recognition to help you define the vision, build the right strategies, and identify opportunities before they become urgent.</p>
             <ul class="svc-list">
               <li>Vision and goals clarification</li>
               <li>Strategic plan development</li>
@@ -859,17 +867,17 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
             </ul>
           </div>
         </div>
-      </div>
 
-      <div class="tab-content" id="t-mgmt">
-        <div class="svc-detail">
-          <div class="rv">
-            <div class="s-label">Management Consulting</div>
-            <h3>Fresh eyes on your most complex challenges.</h3>
-            <p>Solenture&rsquo;s management consulting practice brings a unique combination of time-tested acumen and innovative thinking to private and public entities. We&rsquo;ve partnered with business owners long enough to know that the right solution rarely looks like the obvious one.</p>
-            <p>Our team has held operational leadership roles across finance, supply chain, manufacturing, human resources, and project management in organizations ranging from Fortune 500 companies to family-held enterprises, providing the experience needed to advise at the highest levels.</p>
+        <div class="photobox rv">
+          <div class="photobox-media">
+            <img src="images/management_consulting.png" alt="Management Consulting" loading="lazy">
+            <div class="photobox-caption">
+			<h3>Management Consulting</h3>
+            <div class="photobox-quote">&ldquo;Fresh eyes on your most complex challenges.&rdquo;</div>
+			</div>
           </div>
-          <div class="rv rv-d2">
+          <div>
+            <p>Solenture&rsquo;s management consulting practice brings time-tested acumen and innovative thinking to private and public entities alike. Our team has held operational leadership roles across finance, supply chain, manufacturing, HR, and project management in organizations ranging from Fortune 500 companies to family-held enterprises,providing the experience needed to advise at the highest levels.</p>
             <ul class="svc-list">
               <li>Business process improvement</li>
               <li>Cost control and efficiency analysis</li>
@@ -877,10 +885,28 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
               <li>Top-line growth strategy</li>
               <li>Change management support</li>
               <li>HR and Shared Services functional optimization</li>
-			  <li>Leveraging AI</li>
+              <li>Leveraging AI</li>
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Explore More</div>
+      <h2 class="s-title">The full picture, across every service line.</h2>
+      <div class="s-rule"></div></div>
+      <div class="tile-row-3" style="margin-top:48px">
+        <a class="img-tile rv" onclick="go('total-rewards')" style="cursor:pointer">
+          <div class="img-tile-photo"><img src="images/AdobeStock_354715351__1_.jpeg" alt="Total Rewards" loading="lazy" style="object-position:center 30%"></div>
+          <div class="img-tile-text"><h4>Total Rewards</h4><p>Total rewards strategies that attract, retain, and motivate the talent your business depends on, from your frontline to your C-suite.</p><div class="svc-link" style="margin-top:12px">Explore Total Rewards <span>&rarr;</span></div></div>
+        </a>
+        <a class="img-tile rv rv-d1" onclick="go('wealth')" style="cursor:pointer">
+          <div class="img-tile-photo"><img src="images/wealth_management_still.png" alt="Wealth Management" loading="lazy"></div>
+          <div class="img-tile-text"><h4>Wealth Management</h4><p>Turning the value you&rsquo;ve built into the wealth you keep &mdash; for business owners, executives, and their families.</p><div class="svc-link" style="margin-top:12px">Explore Wealth Management <span>&rarr;</span></div></div>
+        </a>
       </div>
     </div>
   </section>
@@ -945,22 +971,68 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
           </div>
         </div>
       </div>
-      <div style="margin-top:0">
-        <div class="svc-detail rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
-          <div><h3>Qualified &amp; Non-Qualified Retirement Plans</h3>
-          <p>From 401(k) design to non-qualified deferred compensation plans for key executives, Solenture and <a onclick="go('reedmark')" style="color:var(--indigo);text-decoration:underline">Reedmark Advisors, LLC</a> bring decades of retirement plan expertise to every engagement.</p>
-          <p style="font-size:12px;color:var(--mid-gray);font-style:italic;margin-top:8px">*Offered through <a onclick="go('reedmark')" style="color:inherit;text-decoration:underline">Reedmark Advisors, LLC</a></p></div>
-          <ul class="svc-list"><li>401(k) plan design and oversight</li><li>Defined benefit / pension plans</li><li>Non-qualified deferred compensation</li><li>Plan fiduciary support (AIF-credentialed)</li></ul>
+
+      <div class="rv"><div class="s-label">Employee Level</div>
+      <h2 class="s-title" style="font-size:clamp(24px,3vw,34px)">Employee Compensation &amp; Benefits</h2>
+      <div class="s-rule"></div></div>
+
+      <div style="margin-top:48px">
+        <div class="photobox rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
+          <div class="photobox-media">
+            <img src="images/retirement_plans.png" alt="Qualified &amp; Non-Qualified Retirement Plans" loading="lazy">
+            <div class="photobox-caption">
+			<h3>Qualified &amp; Non-Qualified Retirement Plans</h3>
+            <div class="photobox-quote">&ldquo;Decades of retirement plan expertise, brought to every engagement.&rdquo;</div>
+			</div>
+          </div>
+          <div>
+            <p>From 401(k) design to plan fiduciary support, Solenture and <a onclick="go('reedmark')" style="color:var(--indigo);text-decoration:underline">Reedmark Advisors, LLC</a> bring decades of retirement plan expertise to every engagement.</p>
+            <p style="font-size:12px;color:var(--mid-gray);font-style:italic;margin-top:8px">*Offered through <a onclick="go('reedmark')" style="color:inherit;text-decoration:underline">Reedmark Advisors, LLC</a></p>
+            <ul class="svc-list">
+              <li>401(k) plan design and oversight</li>
+              <li>Defined benefit / pension plans</li>
+              <li>Plan fiduciary support (AIF-credentialed)</li>
+            </ul>
+          </div>
         </div>
-        <div class="svc-detail rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
-          <div><h3>Incentive Plans &amp; Compensation Consulting</h3>
-          <p>We design compensation structures that align employee behavior with business outcomes, balancing market competitiveness with internal equity and long-term incentive strategy.</p></div>
-          <ul class="svc-list"><li>Base &amp; variable pay design</li><li>Short- and long-term incentive plans</li><li>Equity and phantom equity structures</li><li>Executive compensation benchmarking</li><li>Performance Management</li></ul>
+
+        <div class="photobox rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
+          <div class="photobox-media">
+            <img src="images/compensation_consulting.png" alt="Incentive Plans &amp; Compensation Consulting" loading="lazy">
+            <div class="photobox-caption">
+			<h3>Incentive Plans &amp; Compensation Consulting</h3>
+            <div class="photobox-quote">&ldquo;Compensation structures that align behavior with business outcomes.&rdquo;</div>
+			</div>
+          </div>
+          <div>
+            <p>We design compensation structures that align employee behavior with business outcomes, balancing market competitiveness with internal equity and long-term incentive strategy.</p>
+            <ul class="svc-list">
+              <li>Base &amp; variable pay design</li>
+              <li>Short- and long-term incentive plans</li>
+              <li>Equity and phantom equity structures</li>
+              <li>Performance Management</li>
+            </ul>
+          </div>
         </div>
-        <div class="svc-detail rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
-          <div><h3>Employee Benefits &amp; Executive Supplemental Plans</h3>
-          <p>Comprehensive benefits packages attract better talent and reduce turnover. For executives, supplemental plans provide the differentiated rewards necessary to retain the people your business can&rsquo;t afford to lose.</p></div>
-          <ul class="svc-list"><li>Overall benefits strategy</li><li>Healthcare</li><li>Ancillary benefits (life and disability)</li><li>Voluntary benefits</li><li>Executive life and disability</li><li>Long-term care</li></ul>
+
+        <div class="photobox rv">
+          <div class="photobox-media">
+            <img src="images/employee_benefits.png" alt="Employee Benefits" loading="lazy">
+            <div class="photobox-caption">
+			<h3>Employee Benefits</h3>
+            <div class="photobox-quote">&ldquo;Attracting and retaining the people your business depends on.&rdquo;</div>
+			</div>
+          </div>
+          <div>
+            <p>Comprehensive benefits packages attract better talent and reduce turnover.</p>
+            <ul class="svc-list">
+              <li>Overall benefits strategy</li>
+              <li>Healthcare</li>
+              <li>Ancillary benefits (life and disability)</li>
+              <li>Voluntary benefits</li>
+			  <li>Long-term care</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -968,17 +1040,67 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
 
   <section class="s s-alt">
     <div class="s-inner">
-      <div class="svc-detail">
-        <div class="rv">
-          <div class="s-label">C-Suite&reg; Executive Office</div>
-          <h3>Concierge-level support for your most valuable people.</h3>
-          <p>Strong leadership elevates a company. Losing it can set one back years. Solenture&rsquo;s C-Suite&reg; Executive Office delivers custom, comprehensive solutions to help businesses retain their executive team and give those executives the personalized attention they deserve.</p>
-          <p>We act as a single point of contact for the communication, administration, and compliance of your most complex executive programs &mdash; freeing HR to focus on strategy rather than plan administration.</p>
-          <div class="pull-quote">&ldquo;In today&rsquo;s competitive market, retaining top-tier talent requires more than compensation. It requires a relationship.&rdquo;</div>
+      <div class="rv"><div class="s-label">Executive Level</div>
+      <h2 class="s-title" style="font-size:clamp(24px,3vw,34px)">Executive Compensation &amp; Benefits</h2>
+      <div class="s-rule"></div>
+      <p class="s-desc">Delivered through Solenture&rsquo;s C-Suite&reg; Executive Office, our executive compensation and benefits programs provide concierge-level support at every stage.</p></div>
+
+      <div style="margin-top:48px">
+        <div class="photobox rv" style="margin-bottom:64px;padding-bottom:64px;border-bottom:1px solid var(--light-gray)">
+          <div class="photobox-media">
+            <img src="images/C-Suite-Circle-Grey__1_.PNG" alt="C-Suite Executive Office" loading="lazy" style="object-fit:contain;background:var(--white);padding:24px">
+            <div class="photobox-caption">
+			<h3>C-Suite&reg; Executive Office</h3>
+            <div class="photobox-quote">&ldquo;In today&rsquo;s competitive market, retaining top-tier talent requires more than compensation. It requires a relationship.&rdquo;</div>
+			</div>
+          </div>
+          <div>
+            <p>Solenture&rsquo;s C-Suite&reg; Executive Office delivers custom, comprehensive solutions to help businesses retain their executive team &mdash; acting as a single point of contact for the communication, administration, and compliance of your most complex executive programs.</p>
+            <ul class="svc-list">
+              <li>Executive benefit plan design</li>
+              <li>Communication and education programs</li>
+              <li>Single-contact administration &amp; compliance support</li>
+              <li>Robust reporting and behavioral modeling</li>
+			  <li>Board member and HR staff support</li>
+            </ul>
+          </div>
         </div>
-        <div class="rv rv-d2">
-          <ul class="svc-list"><li>Executive benefit plan design</li><li>Communication and education programs</li><li>Single-contact administration</li><li>Compliance support</li><li>Robust reporting and behavioral modeling</li><li>Board member and HR staff support</li></ul>
+
+		<div class="photobox rv">
+          <div class="photobox-media">
+            <img src="images/executive.png" alt="Executive Compensation &amp; Supplemental Plans" loading="lazy">
+            <div class="photobox-caption">
+			<h3>Executive Compensation &amp; Supplemental Plans</h3>
+            <div class="photobox-quote">&ldquo;For executives, supplemental plans provide the differentiated rewards necessary to retain the people your business can&rsquo;t afford to lose.&rdquo;</div>
+			</div>
+          </div>
+          <div>
+            <p>From non-qualified deferred compensation plans to market benchmarking, we help ensure executive compensation remains competitive, compliant, and aligned with long-term retention goals. Executive life and disability coverage provide an added layer of protection and reward reserved for your most valuable leaders.</p>
+            <ul class="svc-list">
+              <li>Non-qualified deferred compensation</li>
+              <li>Executive compensation benchmarking</li>
+              <li>Executive life and disability</li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Explore More</div>
+      <h2 class="s-title">The full picture, across every service line.</h2>
+      <div class="s-rule"></div></div>
+      <div class="tile-row-3" style="margin-top:48px">
+        <a class="img-tile rv" onclick="go('consulting')" style="cursor:pointer">
+          <div class="img-tile-photo"><img src="images/AdobeStock_102381789-min__1_.jpeg" alt="Consulting" loading="lazy"></div>
+          <div class="img-tile-text"><h4>Consulting</h4><p>60+ years of experience guiding privately-held companies through growth, strategy, and transition.</p><div class="svc-link" style="margin-top:12px">Explore Consulting <span>&rarr;</span></div></div>
+        </a>
+        <a class="img-tile rv rv-d1" onclick="go('wealth')" style="cursor:pointer">
+          <div class="img-tile-photo"><img src="images/wealth_management_still.png" alt="Wealth Management" loading="lazy"></div>
+          <div class="img-tile-text"><h4>Wealth Management</h4><p>Turning the value you&rsquo;ve built into the wealth you keep &mdash; for business owners, executives, and their families.</p><div class="svc-link" style="margin-top:12px">Explore Wealth Management <span>&rarr;</span></div></div>
+        </a>
       </div>
     </div>
   </section>
@@ -1034,22 +1156,30 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
 
   <section class="s">
     <div class="s-inner">
-	  <div class="about-split">
-      <div class="rv"><div class="s-label">A Different Kind of Wealth Management</div>
+	  <div class="rv"><div class="s-label">A Different Kind of Wealth Management</div>
       <h2 class="s-title">Wealth management for people who built their own.</h2>
       <div class="s-rule"></div>
-      <p class="s-desc" style="max-width:720px">Managing wealth goes well beyond investing. For business owners and executives, it means simultaneously coordinating business income, equity value, estate exposure, insurance coverage, and family goals in alignment. That&rsquo;s the kind of complexity Solenture is built for.</p>
-      <p class="s-desc" style="max-width:720px;margin-top:12px">Through <a onclick="go('reedmark')" style="color:var(--indigo);text-decoration:underline">Reedmark Advisors, LLC</a>, a Solenture wholly-owned subsidiary, our team offers registered investment advisory services alongside our broader planning practice, giving clients a fully integrated relationship without the friction of coordinating multiple firms.</p>
-	  <p class="s-desc" style="max-width:720px;margin-top:12px">For clients preparing for a liquidity event, our <a onclick="go('brokerage')" style="color:var(--indigo);text-decoration:underline">Business Brokerage</a> practice ensures the transaction itself is structured and timed to align with the wealth plan we build together &mdash; one relationship, from the sale through what comes after.</p>
-	  </div>
-      <div class="rv rv-d2"><img src="images/handshake with city background.png" alt="handshake" style="width:100%;height:100%;object-fit:cover;border-radius:4px;display:block"></div>
+      <p class="s-desc" style="max-width:720px">Managing wealth goes well beyond investing. For business owners and executives, it means simultaneously coordinating business income, equity value, estate exposure, insurance coverage, and family goals in alignment. That&rsquo;s the kind of complexity Solenture is built for.</p></div>
+
+      <div class="tile-row-2" style="margin-top:56px">
+        <div class="img-tile rv">
+          <div class="img-tile-photo"><img src="images/wealth_management.png" alt="Financial &amp; Estate Planning" loading="lazy"></div>
+          <div class="img-tile-text"><h4>Financial &amp; Estate Planning</h4><p>We help clients develop a clear vision for the use and distribution of their wealth. From tax-efficient estate structures to trust strategies and charitable planning, Solenture coordinates the full picture.</p></div>
+        </div>
+        <div class="img-tile rv rv-d1">
+          <div class="img-tile-photo"><img src="images/asset_management.png" alt="Asset Management" loading="lazy"></div>
+          <div class="img-tile-text"><h4>Asset Management</h4><p>We help clients determine the allocation strategy that best aligns with their goals and risk tolerance, then access a network of investment managers to deploy those assets with precision and ongoing oversight. Your overall wealth management must also include your business assets, real estate, retirement plans, and debt. We present and maintain online tools to pull your goals and all of your assets into a comprehensive, daily-updated view.</p></div>
+        </div>
+        <div class="img-tile rv rv-d2">
+          <div class="img-tile-photo"><img src="images/insurance.png" alt="Insurance Solutions" loading="lazy"></div>
+          <div class="img-tile-text"><h4>Insurance Solutions</h4><p>From executive life and disability coverage to estate liquidity strategies and business continuation insurance, we ensure the right protections are in place at every stage from wealth accumulation to estate preservation.</p></div>
+        </div>
       </div>
 
-      <div class="serve-grid" style="margin-top:64px">
-        <div class="serve-item rv rv-d1"><h4>Financial &amp; Estate Planning</h4><p>We help clients develop a clear vision for the use and distribution of their wealth. From tax-efficient estate structures to trust strategies and charitable planning, Solenture coordinates the full picture.</p></div>
-        <div class="serve-item rv rv-d2"><h4>Asset Management</h4><p>We help clients determine the allocation strategy that best aligns with their goals and risk tolerance, then access a network of investment managers to deploy those assets with precision and ongoing oversight. Your overall wealth management must also include your business assets, real estate, retirement plans, and debt. We present and maintain online tools to pull your goals and all of your assets into a comprehensive, daily-updated view.</p></div>
-        <div class="serve-item rv rv-d3"><h4>Insurance Solutions</h4><p>From executive life and disability coverage to estate liquidity strategies and business continuation insurance, we ensure the right protections are in place at every stage from wealth accumulation to estate preservation.</p></div>
-      </div>
+      <div class="rv" style="margin-top:56px">
+        <p class="s-desc" style="max-width:none">Through <a onclick="go('reedmark')" style="color:var(--indigo);text-decoration:underline">Reedmark Advisors, LLC</a>, a Solenture wholly-owned subsidiary, our team offers registered investment advisory services alongside our broader planning practice, giving clients a fully integrated relationship without the friction of coordinating multiple firms.</p>
+	  <p class="s-desc" style="max-width:none;margin-top:20px">For clients preparing for a liquidity event, our <a href="/Business_Brokerage_Overview.pdf" target="_blank" style="color:var(--indigo);text-decoration:underline">Business Brokerage</a> practice ensures the transaction itself is structured and timed to align with the wealth plan we build together &mdash; one relationship, from the sale through what comes after.</p>
+	  </div>
     </div>
   </section>
 
@@ -1058,16 +1188,11 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
       <div class="rv"><div class="s-label">Multi-Family Office</div>
       <h2 class="s-title">Your career built your wealth. Now it needs a team dedicated to supporting it.</h2>
       <div class="s-rule"></div></div>
-      <div class="split-img rv" style="margin-top:48px;margin-bottom:56px;border-radius:4px;overflow:hidden">
-          <div class="split-img-photo">
-            <img src="images/multi-family office main picture.png" alt="Multi-Family Office" loading="lazy">
-          </div>
-          <div class="split-img-text" style="background:var(--navy)">
-            <div class="s-label" style="color:var(--indigo)">Your Legacy</div>
-            <h3 style="font-family:var(--serif);font-size:22px;font-weight:400;color:var(--white);margin-bottom:12px">Wealth management for people who built their own.</h3>
-            <p style="font-size:14px;line-height:1.7;color:rgba(255,255,255,0.5);font-weight:300">Simultaneously coordinating business income, equity value, estate exposure, insurance coverage, and family goals in alignment.</p>
-          </div>
-        </div>
+
+      <div class="rv" style="margin-top:32px;margin-bottom:56px;max-width:760px">
+        <p class="s-desc" style="max-width:none">The Multi-Family Office is an extension of Solenture&rsquo;s C-Suite&reg; Executive Office, providing dedicated wealth management assistance to owners and executives of private and public companies.</p>
+      </div>
+
 <div class="tile-row-2">
           <div class="img-tile rv">
             <div class="img-tile-photo"><img src="images/planning.png" alt="Planning" loading="lazy"></div>
@@ -1090,9 +1215,27 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
           </div>
           <div class="img-tile rv rv-d1">
             <div class="img-tile-photo"><img src="images/trust services.png" alt="Trust Services" loading="lazy"></div>
-            <div class="img-tile-text"><h4>Trust Services</h4><p>From asset ownership structure to insurance coverage to liability protection, we proactively balance risk in alignment with your wealth and your risk appetite.</p></div>
+            <div class="img-tile-text"><h4>Trust Services</h4><p>Our services to the family and any ongoing business assets are fully integrated with Member’s Trust Company in order to provide a world-class solution to you at a competitive price.</p></div>
           </div>
         </div>
+    </div>
+  </section>
+
+  <section class="s s-alt">
+    <div class="s-inner">
+      <div class="rv"><div class="s-label">Explore More</div>
+      <h2 class="s-title">The full picture, across every service line.</h2>
+      <div class="s-rule"></div></div>
+      <div class="tile-row-3" style="margin-top:48px">
+        <a class="img-tile rv" onclick="go('consulting')" style="cursor:pointer">
+          <div class="img-tile-photo"><img src="images/AdobeStock_102381789-min__1_.jpeg" alt="Consulting" loading="lazy"></div>
+          <div class="img-tile-text"><h4>Consulting</h4><p>60+ years of experience guiding privately-held companies through growth, strategy, and transition.</p><div class="svc-link" style="margin-top:12px">Explore Consulting <span>&rarr;</span></div></div>
+        </a>
+        <a class="img-tile rv rv-d1" onclick="go('total-rewards')" style="cursor:pointer">
+          <div class="img-tile-photo"><img src="images/AdobeStock_354715351__1_.jpeg" alt="Total Rewards" loading="lazy" style="object-position:center 30%"></div>
+          <div class="img-tile-text"><h4>Total Rewards</h4><p>Total rewards strategies that attract, retain, and motivate the talent your business depends on, from your frontline to your C-suite.</p><div class="svc-link" style="margin-top:12px">Explore Total Rewards <span>&rarr;</span></div></div>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1130,7 +1273,6 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
     </div>
   </section>
 </div>
-
 
 <!-- ═══════════════ REEDMARK ADVISORS ═══════════════ -->
 <div class="page" id="page-reedmark">
@@ -1831,7 +1973,7 @@ footer{background:var(--navy-deep);padding:96px 56px 48px}
   		<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
 	  </a>
 	  </div>
-      <div class="footer-col"><h5>Services</h5><a onclick="go('consulting')">Business Consulting</a><a onclick="go('brokerage')">Business Brokerage</a><a onclick="go('consulting')">Exit &amp; Transition Planning</a><a onclick="go('total-rewards')">Total Rewards</a><a onclick="go('total-rewards')">C-Suite&reg; Executive Office</a><a onclick="go('wealth')">Wealth Management</a><a onclick="go('wealth')">Executive Family Office</a></div>
+      <div class="footer-col"><h5>Services</h5><a onclick="go('consulting')">Business Consulting</a><a href="/Business_Brokerage_Overview.pdf" target="_blank">Business Brokerage</a><a onclick="go('consulting')">Exit &amp; Transition Planning</a><a onclick="go('total-rewards')">Total Rewards</a><a onclick="go('total-rewards')">C-Suite&reg; Executive Office</a><a onclick="go('wealth')">Wealth Management</a><a onclick="go('wealth')">Executive Family Office</a></div>
       <div class="footer-col"><h5>Company</h5><a onclick="go('about')">Our History</a><a onclick="go('team')">Our Team</a><a onclick="go('contact')">Contact</a><a onclick="go('reedmark')">Reedmark Advisors, LLC</a></div>
       <div class="footer-col"><h5>Contact</h5>
 		  <!-- Grouped Address (Brightens both lines on hover) -->
