@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reedmark Advisors, LLC | SEC-Registered Investment Adviser</title>
+<meta name="description" content="Reedmark Advisors, LLC is an SEC-registered investment adviser and wholly-owned subsidiary of Solenture, offering retirement plan consulting and wealth advisory.">
+<link rel="canonical" href="https://www.solenture.com/reedmark-advisors/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="icon" type="image/png" href="/images/favicon-solenture-no-bkg.png">
+<link rel="apple-touch-icon" href="/images/favicon-solenture-no-bkg.png">
+<meta property="og:site_name" content="Solenture">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://www.solenture.com/reedmark-advisors/">
+<meta property="og:title" content="Reedmark Advisors, LLC | SEC-Registered Investment Adviser">
+<meta property="og:description" content="Reedmark Advisors, LLC is an SEC-registered investment adviser and wholly-owned subsidiary of Solenture, offering retirement plan consulting and wealth advisory.">
+<meta property="og:image" content="https://www.solenture.com/images/reedmark_logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reedmark Advisors, LLC | SEC-Registered Investment Adviser">
+<meta name="twitter:description" content="Reedmark Advisors, LLC is an SEC-registered investment adviser and wholly-owned subsidiary of Solenture, offering retirement plan consulting and wealth advisory.">
+<meta name="twitter:image" content="https://www.solenture.com/images/reedmark_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   SOLENTURE — "Quiet Authority" Design System
+   Enhances current site feel. White + navy + blue.
+   ═══════════════════════════════════════════════ */
+:root {
+  --white: #FFFFFF;
+  --off-white: #F3F5F8;
+  --light-gray: #E3E8ED;
+  --mid-gray: #9799A3;
+  --dark-gray: #5A5D66;
+  --charcoal: #374151;
+  --navy: #1E2E3F;
+  --navy-deep: #152231;
+  --indigo: #0075BB;
+  --indigo-light: #C1E2F8;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--dark-gray);background:var(--white);font-size:16px;line-height:1.7;font-weight:400;overflow-x:hidden}
+a{text-decoration:none;color:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+button{border:none;background:none;cursor:pointer;font-family:inherit}
+::selection{background:rgba(0,117,187,0.12)}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:80px;display:flex;align-items:center;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:box-shadow 0.4s}
+nav.scrolled{box-shadow:0 1px 0 var(--light-gray)}
+.nav-inner{width:100%;max-width:1280px;margin:0 auto;padding:0 56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--sans);font-size:18px;font-weight:600;color:var(--navy);letter-spacing:1px;cursor:pointer}
+.nav-logo-img{height:28px;cursor:pointer}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:400;color:var(--dark-gray);transition:color 0.2s;letter-spacing:0.2px}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-cta{font-size:13px!important;font-weight:500!important;color:var(--white)!important;background:var(--indigo);padding:10px 24px;border-radius:4px;transition:background 0.2s,transform 0.15s}
+.nav-cta:hover{background:#006AAA;transform:translateY(-1px)}
+.hamburger{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.hamburger span,.hamburger span::before,.hamburger span::after{display:block;width:20px;height:1.5px;background:var(--navy);transition:all 0.3s}
+.hamburger span{position:relative}
+.hamburger span::before{content:'';position:absolute;top:-6px}
+.hamburger span::after{content:'';position:absolute;top:6px}
+.hamburger.open span{background:transparent}
+.hamburger.open span::before{transform:translateY(6px) rotate(45deg)}
+.hamburger.open span::after{transform:translateY(-6px) rotate(-45deg)}
+.mobile-overlay{position:fixed;inset:0;z-index:999;background:var(--white);display:none;flex-direction:column;justify-content:center;align-items:center;gap:20px;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.mobile-overlay.visible{opacity:1;pointer-events:all}
+.mobile-overlay a{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--navy)}
+
+/* ── PAGE SYSTEM ── */
+.page{display:none}.page.active{display:block}
+
+/* ── HERO (Home) ── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg video{width:100%;height:100%;object-fit:cover;opacity:0.35}
+.hero-bg .hero-poster{position:absolute;inset:0;background:url('/hero-poster.jpg') center/cover;opacity:0.35;transition:opacity 0.5s}
+.hero-bg.video-loaded .hero-poster{opacity:0}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(30,46,63,0.7) 0%,rgba(30,46,63,0.3) 40%,rgba(30,46,63,0.5) 70%,rgba(30,46,63,0.85) 100%)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:120px 56px 180px}
+@media(max-height:700px){.hero{min-height:700px}}
+.hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s 0.3s forwards}
+.hero h1{font-family:var(--serif);font-size:clamp(36px,5vw,72px);font-weight:400;color:var(--white);line-height:1.12;letter-spacing:-0.02em;max-width:800px;margin-bottom:24px;opacity:0;animation:fadeUp 0.8s 0.5s forwards}
+.hero-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,0.55);max-width:520px;line-height:1.75;margin-bottom:44px;opacity:0;animation:fadeUp 0.8s 0.7s forwards}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.8s 0.9s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--white);background:var(--indigo);padding:14px 32px;border-radius:4px;transition:background 0.2s,transform 0.15s}
+.btn-primary:hover{background:#006AAA;transform:translateY(-1px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:rgba(255,255,255,0.7);padding:14px 32px;border-radius:4px;border:1px solid rgba(255,255,255,0.2);transition:color 0.2s,border-color 0.2s}
+.btn-ghost:hover{color:var(--white);border-color:rgba(255,255,255,0.5)}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+.hero-eyebrow,.hero h1,.hero-sub,.hero-btns{transform:translateY(20px)}
+
+/* Stats Bar */
+.hero-stats{position:absolute;bottom:0;left:0;right:0;z-index:3;border-top:1px solid rgba(255,255,255,0.08);background:rgba(30,46,63,0.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-stats-inner{max-width:1280px;margin:0 auto;padding:0 56px;display:flex}
+.h-stat{flex:1;padding:28px 0;border-right:1px solid rgba(255,255,255,0.06);text-align:center}
+.h-stat:last-child{border:none}
+.h-stat-num{font-family:var(--serif);font-size:32px;font-weight:400;color:var(--white);letter-spacing:-0.02em}
+.h-stat-label{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px}
+
+/* ── SECTIONS ── */
+.s{padding:160px 56px}
+.s-alt{background:var(--off-white)}
+.s-navy{background:var(--navy)}
+.s-inner{max-width:1280px;margin:0 auto}
+.s-label{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--indigo);margin-bottom:16px}
+.s-title{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:400;color:var(--navy);line-height:1.2;letter-spacing:-0.01em;margin-bottom:20px}
+.s-desc{font-size:16px;line-height:1.8;color:var(--dark-gray);font-weight:300;max-width:600px}
+.s-rule{width:48px;height:1px;background:var(--indigo);margin:20px 0}
+.img-tile{border-radius:4px;overflow:hidden}
+.img-tile-photo{position:relative;width:100%;height:240px;overflow:hidden}
+.img-tile-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.img-tile-photo::after{content:"";position:absolute;inset:0;background:var(--navy);opacity:0.35;transition:opacity 0.3s ease;pointer-events:none}
+.img-tile:hover .img-tile-photo::after{opacity:0}
+.img-tile-text{background:var(--navy);padding:24px 28px}
+.img-tile-text h4{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--white);margin-bottom:8px}
+.img-tile-text p{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.55);font-weight:300;margin:0}
+.img-tile-text p+p{margin-top:8px}
+.tile-row-2{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:135px}
+.tile-row-3{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:32px}
+@media(max-width:1024px){.tile-row-2,.tile-row-3{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.tile-row-2,.tile-row-3{grid-template-columns:1fr}}
+
+/* ── MISSION BAND ── */
+.mission-band{background:var(--indigo);padding:100px 56px;text-align:center}
+.mission-band .s-label{color:rgba(255,255,255,0.5)}
+.mission-quote{font-family:var(--serif);font-size:clamp(20px,2.5vw,28px);font-weight:400;font-style:italic;color:var(--white);line-height:1.5;max-width:800px;margin:0 auto}
+
+/* ── SERVICE CARDS ── */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--light-gray);margin-top:56px;border:1px solid var(--light-gray)}
+.svc-card{background:var(--white);padding:48px 40px;position:relative;cursor:pointer;transition:background 0.3s}
+.svc-card::after{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--indigo);transition:height 0.4s}
+.svc-card:hover::after{height:100%}
+.svc-card:hover{background:var(--off-white);box-shadow:0 4px 24px rgba(0,0,0,0.04)}
+.svc-card h3{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--navy);margin-bottom:16px}
+.svc-card p{font-size:15px;line-height:1.7;color:var(--dark-gray);font-weight:300;margin-bottom:20px}
+.svc-card ul{list-style:none;margin-bottom:24px}
+.svc-card ul li{font-size:13px;color:var(--mid-gray);padding:4px 0 4px 16px;position:relative}
+.svc-card ul li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:1px;background:var(--indigo)}
+.svc-link{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--indigo);display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s}
+.svc-card:hover .svc-link{gap:10px}
+
+/* ── WHO WE SERVE ── */
+.serve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:64px;margin-top:72px}
+.serve-item .serve-num{font-family:var(--serif);font-size:36px;font-weight:400;color:var(--light-gray);margin-bottom:16px}
+.serve-item h4{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--navy);margin-bottom:12px}
+.serve-item p{font-size:15px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+
+/* ── PROCESS STRIP ── */
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:72px;position:relative}
+.process-steps::before{content:'';position:absolute;top:20px;left:10%;right:10%;height:1px;background:rgba(255,255,255,0.1)}
+.p-step{text-align:center;position:relative}
+.p-step .step-dot{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:var(--serif);font-size:16px;color:var(--white);background:var(--navy);position:relative;z-index:1;transition:border-color 0.3s}
+.p-step:hover .step-dot{border-color:var(--indigo)}
+.p-step h4{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);margin-bottom:8px}
+.p-step p{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.4);font-weight:300;padding:0 8px}
+
+/* ── CTA SECTION ── */
+.cta-section{background:var(--off-white);padding:140px 56px}
+.cta-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.cta-info .s-title{max-width:400px}
+.cta-contact-item{display:flex;gap:12px;align-items:center;padding:12px 0;font-size:15px;color:var(--charcoal)}
+.cta-contact-item svg{width:18px;height:18px;stroke:var(--indigo);fill:none;stroke-width:1.5;flex-shrink:0}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--mid-gray);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1px solid var(--light-gray);border-radius:4px;font-family:inherit;font-size:14px;color:var(--navy);background:var(--white);transition:border-color 0.2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--indigo)}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-submit{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--white);background:var(--indigo);padding:14px 32px;border-radius:4px;transition:background 0.2s,transform 0.15s;margin-top:4px}
+.form-submit:hover{background:#006AAA;transform:translateY(-1px)}
+.page-contact a[href^="tel:"]
+{ color: #FFFFFF}
+	
+/* ── PAGE HERO (inner pages) ── */
+.page-hero{padding:140px 56px 80px;background:var(--off-white)}
+.page-hero .s-title{max-width:640px}
+
+/* ── ABOUT PAGE ── */
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.pull-quote{padding:24px 0 24px 24px;border-left:3px solid var(--indigo);font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.6;color:var(--navy);font-weight:400;margin:32px 0}
+.advisors-note{background:var(--indigo-light);border-radius:6px;padding:32px 40px;margin-top:32px}
+.advisors-note h4{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--navy);margin-bottom:8px}
+.advisors-note p{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+.timeline{position:relative;margin-top:72px;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:4px;top:0;bottom:0;width:1px;background:var(--light-gray)}
+.tl-item{position:relative;padding:0 0 48px 40px}
+.tl-item::before{content:'';position:absolute;left:-32px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--white);border:2px solid var(--indigo)}
+.tl-item .tl-year{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--navy);margin-bottom:4px}
+.tl-item .tl-era{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--indigo);margin-bottom:8px}
+.tl-item p{font-size:15px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+
+/* ── SERVICE DETAIL (Consulting, TR, WM pages) ── */
+.svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.svc-detail h3{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--navy);margin-bottom:16px}
+.svc-detail p{font-size:15px;line-height:1.8;color:var(--dark-gray);font-weight:300;margin-bottom:12px}
+.svc-list{list-style:none;margin-top:20px}
+.svc-list li{padding:10px 0 10px 20px;position:relative;font-size:14px;color:var(--charcoal);border-bottom:1px solid var(--light-gray)}
+.svc-list li::before{content:'';position:absolute;left:0;top:50%;width:8px;height:1px;background:var(--indigo)}
+.svc-list li:last-child{border:none}
+.cross-note{background:var(--indigo-light);border-radius:4px;padding:20px 24px;margin-top:24px;font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+#page-privacy .legal-wrap{max-width:760px;margin:0 auto;padding:160px 24px 120px}
+#page-privacy h2{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--navy);margin:48px 0 16px}
+#page-privacy h3{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--navy);margin:28px 0 12px}
+#page-privacy p{font-size:14px;line-height:1.8;color:var(--dark-gray);font-weight:300;margin-bottom:14px}
+#page-privacy ul,#page-privacy ol{margin:0 0 16px 20px;font-size:14px;line-height:1.8;color:var(--dark-gray);font-weight:300}
+#page-privacy li{margin-bottom:6px}
+#page-privacy a{color:var(--indigo);text-decoration:underline}
+#page-privacy table{width:100%;border-collapse:collapse;margin:20px 0 28px;font-size:13px}
+#page-privacy th,#page-privacy td{border:1px solid var(--light-gray);padding:10px 12px;text-align:left;vertical-align:top}
+#page-privacy th{background:var(--indigo-light);color:var(--navy);font-weight:600}
+#page-privacy .toc{background:var(--light-gray);border-radius:4px;padding:24px 28px;margin:32px 0 48px}
+#page-privacy .toc h4{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid-gray);margin-bottom:12px}
+#page-privacy .toc ol{margin:0;padding-left:18px;columns:2;column-gap:32px}
+#page-privacy .toc li{margin-bottom:6px;font-size:13px}
+#page-privacy .toc a{text-decoration:none}
+#page-privacy .toc a:hover{text-decoration:underline}
+#page-privacy .updated-date{font-size:12px;color:var(--mid-gray);margin-top:8px}
+@media(max-width:640px){#page-privacy .toc ol{columns:1}}
+	
+/* Tab system for Consulting page */
+.tab-nav{display:flex;gap:0;border-bottom:1px solid var(--light-gray);margin-bottom:48px}
+.tab-btn{padding:16px 32px;font-size:14px;font-weight:500;color:var(--mid-gray);border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;cursor:pointer;background:none;font-family:var(--sans)}
+.tab-btn.active{color:var(--navy);border-bottom-color:var(--indigo)}
+.tab-btn:hover{color:var(--navy)}
+.tab-content{display:none}.tab-content.active{display:block}
+
+/* ── PHOTOBOX (Consulting / Total Rewards / Wealth Mgmt subsections) ── */
+.photobox{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.photobox-media{border-radius:4px;overflow:hidden}
+.photobox-media img{width:100%;height:200px;object-fit:cover;display:block}
+.photobox-caption{background:var(--navy);padding:24px 28px}
+.photobox-caption h3{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--white);margin-bottom:10px}
+.photobox-quote{font-family:var(--serif);font-size:15px;font-style:italic;line-height:1.6;color:rgba(255,255,255,0.75);border-left:2px solid rgba(255,255,255,0.35);padding-left:14px}
+.photobox p{font-size:15px;line-height:1.8;color:var(--dark-gray);font-weight:300;margin-bottom:12px}
+@media(max-width:1024px){.photobox{grid-template-columns:1fr;gap:32px}}
+
+/* ── TEAM ── */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:72px}
+.team-card{cursor:pointer}
+.team-photo-wrap{overflow:hidden;border-radius:4px;aspect-ratio:3/4;background:var(--light-gray)}
+.team-photo{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:filter 0.4s,transform 0.5s}
+.team-card:hover .team-photo{filter:grayscale(0%);transform:scale(1.03)}
+.team-card .t-name{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--navy);margin-top:16px}
+.team-card .t-title{font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--mid-gray);margin-top:4px}
+.support-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px}
+.support-name{font-size:14px;color:var(--charcoal);padding:12px 0;border-bottom:1px solid var(--light-gray)}
+
+/* Team Modal */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;padding:40px}
+.modal-bg.open{opacity:1;pointer-events:all}
+.modal{background:var(--white);max-width:680px;width:100%;border-radius:8px;max-height:85vh;overflow-y:auto;padding:48px;transform:translateY(16px);transition:transform 0.3s}
+.modal-bg.open .modal{transform:translateY(0)}
+.modal-close{position:absolute;top:16px;right:20px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--mid-gray);border-radius:50%;transition:background 0.2s}
+.modal-close:hover{background:var(--off-white)}
+.modal-header{display:flex;gap:24px;align-items:center;margin-bottom:24px}
+.modal-img{width:100px;height:100px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.modal-name{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--navy)}
+.modal-role{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--indigo);margin-top:4px}
+.modal-bio{font-size:15px;line-height:1.8;color:var(--dark-gray);font-weight:300}
+.modal-bio p{margin-bottom:14px}
+
+/* ── CONTACT PAGE ── */
+.contact-split{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 80px)}
+.contact-left{background:var(--navy);position:relative;overflow:hidden;padding:140px 56px 80px;display:flex;flex-direction:column;justify-content:center}
+.contact-left .s-label{color:var(--indigo)}
+.contact-left h1,.contact-left h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,40px);font-weight:400;color:var(--white);margin-bottom:20px;line-height:1.2}
+.contact-left p{font-size:15px;line-height:1.75;color:rgba(255,255,255,0.5);font-weight:300;max-width:380px;margin-bottom:40px}
+.c-item{padding:14px 0;display:flex;gap:12px;align-items:flex-start}
+.c-item .c-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.c-item .c-value{font-size:15px;color:var(--white);font-weight:400;line-height:1.5}
+.c-item .c-value a{color:var(--white)}
+.c-item svg{width:16px;height:16px;stroke:var(--indigo);fill:none;stroke-width:1.5;flex-shrink:0;margin-top:2px}
+.contact-right{padding:140px 56px 80px;display:flex;flex-direction:column;justify-content:center}
+.contact-right h3{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--navy);margin-bottom:8px}
+.contact-right>p{font-size:14px;color:var(--dark-gray);font-weight:300;margin-bottom:32px}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-deep);padding:96px 56px 48px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.footer-brand{font-size:16px;font-weight:600;color:white;letter-spacing:0.5px;margin-bottom:12px}
+.footer-tagline{font-size:13px;line-height:1.7;color:rgba(255,255,255,0.35);font-weight:300;max-width:300px}
+.footer-col h5{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:16px}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.35);font-weight:300;padding:5px 0;transition:color 0.2s}
+.footer-col a:hover{color:var(--white)}
+.footer-social{display:inline-flex;margin-top:16px;color:rgba(255,255,255,0.35);transition:color 0.2s}
+.footer-social:hover{color:var(--white)}
+.footer-legal{padding-top:28px;font-size:10px;line-height:1.7;color:rgba(255,255,255,0.18);max-width:880px}
+.footer-legal a{color:rgba(255,255,255,0.3);text-decoration:underline}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:11px;color:rgba(255,255,255,0.18)}
+/* Footer Contact Styling */
+.footer-address {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 300;
+  padding: 5px 0;
+  line-height: 1.5;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.footer-address:hover {
+  color: var(--white);
+}
+
+.footer-col a.footer-link {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 300;
+  padding: 5px 0;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.footer-col a.footer-link:hover {
+  color: var(--white);
+}
+	
+/* ── PARTNER LOGOS ── */
+.partners{padding:56px;border-top:1px solid var(--light-gray);border-bottom:1px solid var(--light-gray)}
+.partners-inner{max-width:1280px;margin:0 auto;text-align:center}
+.partners-label{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--mid-gray);margin-bottom:32px}
+.partners-logos{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.partners-logos img{height:48px;width:auto;filter:grayscale(100%);opacity:0.45;transition:opacity 0.3s,filter 0.3s}
+.partners-logos img:hover{filter:grayscale(0%);opacity:0.85}
+
+/* ── SCROLL REVEAL ── */
+.rv{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.rv-d1{transition-delay:0.1s}.rv-d2{transition-delay:0.2s}.rv-d3{transition-delay:0.3s}.rv-d4{transition-delay:0.4s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .svc-grid{grid-template-columns:1fr 1fr}.serve-grid{grid-template-columns:1fr}
+  .about-split,.svc-detail,.cta-inner{grid-template-columns:1fr;gap:48px}
+  .process-steps{grid-template-columns:repeat(3,1fr);gap:24px}
+  .process-steps::before{display:none}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .support-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}.mobile-overlay{display:flex}
+  .s{padding:100px 24px}.page-hero{padding:140px 24px 72px}.cta-section{padding:100px 24px}
+  .nav-inner{padding:0 24px}
+  .hero-content{padding:0 24px 140px}
+  .hero-stats-inner{padding:0 16px}
+  .h-stat{padding:20px 0}
+  .h-stat-num{font-size:24px}
+  .h-stat-label{font-size:9px;letter-spacing:1.5px}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .support-grid{grid-template-columns:1fr 1fr}
+  .contact-split{grid-template-columns:1fr}
+  .contact-left,.contact-right{padding:100px 24px 56px}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+  .form-row{grid-template-columns:1fr}
+  .tab-nav{overflow-x:auto}
+  .tab-btn{white-space:nowrap;padding:12px 20px;font-size:13px}
+  .modal{padding:28px}
+  .modal-header{flex-direction:column;text-align:center}
+  .footer-bottom{flex-direction:column;gap:6px;text-align:center}
+}
+
+/* ── PHOTO BANDS ── */
+.photo-band{position:relative;height:400px;overflow:hidden}
+.photo-band img{width:100%;height:100%;object-fit:cover;filter:brightness(0.85) saturate(0.9)}
+.photo-band-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--navy) 0%,rgba(30,46,63,0.4) 50%,transparent 100%);display:flex;align-items:center;padding:0 56px}
+.photo-band-content{max-width:480px}
+.photo-band-content .s-label{color:var(--indigo)}
+.photo-band-content h3{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--white);line-height:1.3;margin-bottom:12px}
+.photo-band-content p{font-size:15px;color:rgba(255,255,255,0.6);font-weight:300;line-height:1.7}
+
+/* ── SPLIT IMAGE SECTIONS ── */
+.split-img{display:grid;grid-template-columns:1fr 1fr;min-height:500px}
+.split-img-photo{overflow:hidden}
+.split-img-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(0.9)}
+.split-img-text{padding:80px 64px;display:flex;flex-direction:column;justify-content:center}
+
+/* ── ANIMATED RULE ── */
+.s-rule{width:0;height:1px;background:var(--indigo);transition:width 0.8s cubic-bezier(0.16,1,0.3,1);margin:20px 0}
+.rv.vis .s-rule,.s-rule.vis{width:56px}
+
+/* ── STAT COUNTER REFINEMENT ── */
+.h-stat-num{opacity:0;transform:translateY(8px);transition:opacity 0.6s,transform 0.6s}
+.h-stat-num.counted{opacity:1;transform:translateY(0)}
+
+/* Hero z-index fix for content above overlay */
+.hero-content{z-index:2}
+.hero-stats{z-index:3}
+
+/* ── PULL QUOTE ENHANCEMENT ── */
+.pull-quote{font-size:22px;letter-spacing:-0.01em}
+
+/* ── NAV DROPDOWN ── */
+.nav-item-drop{position:relative}
+.nav-item-drop::after{content:'';position:absolute;top:100%;left:-20px;right:-20px;height:28px}
+.nav-drop-trigger{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px;font-weight:400;color:var(--dark-gray);transition:color 0.2s;letter-spacing:0.2px}
+.nav-drop-trigger svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2;transition:transform 0.2s}
+.nav-drop-trigger:hover,.nav-drop-trigger.active{color:var(--navy)}
+.nav-dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(0);min-width:220px;background:var(--white);border-radius:6px;box-shadow:0 12px 40px rgba(20,30,45,0.12);padding:10px;opacity:0;pointer-events:none;transition:opacity 0.2s,transform 0.2s;border:1px solid var(--light-gray);margin-top:28px}
+.nav-item-drop:hover .nav-dropdown{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0)}
+.nav-dropdown a{display:block;padding:10px 14px;font-size:13px;border-radius:4px;color:var(--dark-gray);transition:background 0.15s,color 0.15s}
+.nav-dropdown a:hover{background:var(--off-white);color:var(--navy)}
+
+/* ── REEDMARK THEME (page-reedmark scoped) ── */
+#page-reedmark{--rm-blue:#005D8C;--rm-blue-light:#E3EEF4}
+#page-reedmark .s-label{color:var(--rm-blue)}
+#page-reedmark .s-rule{background:var(--rm-blue)}
+#page-reedmark .pull-quote{border-left-color:var(--rm-blue)}
+#page-reedmark .svc-list li::before{background:var(--rm-blue)}
+#page-reedmark .cross-note{background:var(--rm-blue-light)}
+#page-reedmark .advisors-note{background:var(--rm-blue-light)}
+#page-reedmark .tl-item::before{border-color:var(--rm-blue)}
+#page-reedmark .tl-item .tl-year{color:var(--rm-blue)}
+#page-reedmark .tl-item .tl-era{color:var(--rm-blue)}
+#page-reedmark .photo-band-content .s-label{color:var(--rm-blue)}
+#page-reedmark .form-submit,#page-reedmark .btn-primary{background:var(--rm-blue)}
+#page-reedmark .form-submit:hover,#page-reedmark .btn-primary:hover{background:#004A70}
+#page-reedmark .form-group input:focus,#page-reedmark .form-group select:focus,#page-reedmark .form-group textarea:focus{border-color:var(--rm-blue)}
+#page-reedmark .cta-contact-item svg{stroke:var(--rm-blue)}
+#page-reedmark .c-item svg{stroke:var(--rm-blue)}
+#page-reedmark .serve-item .serve-num{color:var(--rm-blue-light)}
+#page-reedmark .split-img-text .s-label{color:var(--rm-blue)}
+#page-reedmark .split-img-text[style*="navy"] .s-label{color:#6EC1E4}
+.rm-logo-wrap{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.rm-logo-wrap img{height:46px}
+.rm-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--rm-blue);background:var(--rm-blue-light);padding:8px 16px;border-radius:20px;margin-bottom:20px}
+.rm-badge svg{width:12px;height:12px}
+.founder-section{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;background:var(--rm-blue-light);border-radius:8px;padding:48px;margin-top:24px}
+.founder-photo{width:140px;height:140px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--white)}
+.founder-quote{font-family:var(--serif);font-size:20px;font-style:italic;line-height:1.6;color:var(--navy);margin-bottom:16px}
+.founder-attribution{font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--rm-blue)}
+.founder-context{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300;margin-top:20px}
+@media(max-width:768px){.founder-section{grid-template-columns:1fr;text-align:center;padding:32px 24px}.founder-photo{margin:0 auto}}
+
+.s-navy::after{content:'';position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.s-navy{position:relative}
+
+/* ── TEAM CARD HOVER LIFT ── */
+.team-card:hover{transform:translateY(-4px);transition:transform 0.3s}
+.team-card{transition:transform 0.3s}
+
+/* ── SERVE ITEM HOVER ── */
+.serve-item{padding:32px;border-radius:4px;transition:background 0.3s}
+.serve-item:hover{background:var(--white);box-shadow:0 2px 16px rgba(0,0,0,0.04)}
+
+/* ── RESPONSIVE PHOTO BANDS ── */
+@media(max-width:768px){
+.photo-band{height:300px}
+.photo-band-overlay{padding:0 24px}
+.split-img{grid-template-columns:1fr}
+.split-img-photo{height:280px}
+.split-img-text{padding:48px 24px}
+}
+
+/* ── PAGE HERO PHOTO BACKGROUNDS ── */
+.page-hero{position:relative;overflow:hidden}
+.page-hero-img{position:absolute;inset:0;z-index:0}
+.page-hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.35) saturate(0.7)}
+.page-hero-img video{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(0.35) saturate(0.7)}
+.page-hero-content{position:relative;z-index:1}
+
+/* ── BROKERAGE PAGE STYLES ── */
+.phase-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--light-gray);margin-top:48px}
+.phase-step{background:var(--white);padding:40px 32px;position:relative}
+.phase-step:hover{background:var(--off-white)}
+.phase-num{font-family:var(--serif);font-size:11px;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--indigo);margin-bottom:12px}
+.phase-step h4{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--navy);margin-bottom:10px}
+.phase-step p{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--light-gray);margin-top:48px}
+.diff-card{background:var(--white);padding:40px 36px}
+.diff-card.highlight{background:var(--navy)}
+.diff-card.highlight h4,.diff-card.highlight p,.diff-card.highlight li{color:rgba(255,255,255,0.85)}
+.diff-card.highlight .s-label{color:var(--indigo)}
+.diff-card h4{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--navy);margin-bottom:12px}
+.diff-card p{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300;margin-bottom:16px}
+.diff-card ul{list-style:none}
+.diff-card ul li{font-size:13px;color:var(--mid-gray);padding:6px 0 6px 16px;position:relative;border-bottom:1px solid var(--light-gray)}
+.diff-card.highlight ul li{border-bottom-color:rgba(255,255,255,0.1)}
+.diff-card ul li::before{content:'';position:absolute;left:0;top:14px;width:6px;height:1px;background:var(--indigo)}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+.li-embed{width:100%;max-width:504px;margin:0 auto}
+.li-embed iframe{width:100%;height:567px;border:none;border-radius:4px}
+.case-card{background:var(--off-white);border-radius:4px;padding:40px 32px;position:relative;overflow:hidden}
+.case-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--indigo)}
+.case-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--indigo);margin-bottom:8px}
+.case-card h4{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--navy);margin-bottom:12px}
+.case-card p{font-size:14px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+.case-placeholder{font-size:12px;color:var(--mid-gray);font-style:italic;margin-top:12px;padding-top:12px;border-top:1px solid var(--light-gray)}
+
+/* ── ASSESSMENT WIDGET ── */
+.assessment-wrap{background:var(--navy);padding:80px 56px}
+.assessment-inner{max-width:860px;margin:0 auto}
+.assessment-q{margin-bottom:16px;padding:20px 24px;background:rgba(255,255,255,0.05);border-radius:4px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:background 0.2s}
+.assessment-q:hover{background:rgba(255,255,255,0.09)}
+.assessment-q input[type=checkbox]{width:18px;height:18px;accent-color:var(--indigo);flex-shrink:0;cursor:pointer}
+.assessment-q label{font-size:15px;color:rgba(255,255,255,0.8);font-weight:300;cursor:pointer;line-height:1.4}
+.assessment-score{margin-top:32px;padding:28px 32px;background:rgba(0,117,187,0.15);border-radius:4px;border:1px solid var(--indigo);display:none}
+.assessment-score h4{font-family:var(--serif);font-size:20px;color:var(--white);margin-bottom:8px}
+.assessment-score p{font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:16px}
+.score-bar{height:6px;background:rgba(255,255,255,0.1);border-radius:3px;margin-bottom:20px}
+.score-fill{height:100%;border-radius:3px;background:var(--indigo);transition:width 0.6s ease}
+@media(max-width:1024px){.phase-steps{grid-template-columns:1fr 1fr}.diff-grid{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.assessment-wrap{padding:60px 24px}.phase-steps{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}}
+	/* ══ MOBILE FIXES ══ */
+html{overflow-x:hidden}
+
+@media(max-width:768px){
+  /* Hero: restore top padding so content clears the 80px fixed nav */
+  .hero-content{padding:112px 24px 150px}
+  .hero h1{font-size:32px}
+
+  /* What We Do: single column (also removes the horizontal overflow) */
+  .svc-grid{grid-template-columns:1fr}
+  .svc-card{padding:36px 28px}
+
+  /* Home-only sections still carrying desktop 56px side padding */
+  .mission-band{padding:72px 24px}
+  .partners{padding:48px 24px}
+  .partners-logos{gap:28px}
+  .partners-logos img{height:36px;max-width:40vw;object-fit:contain}
+  footer{padding:72px 24px 40px}
+}
+	.form-thanks{padding:32px 0}
+.form-thanks h3{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:10px}
+.form-thanks p{font-size:15px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+.form-error{margin-top:14px;font-size:13px;line-height:1.6;color:#B3261E}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.solenture.com/"},
+    {"@type":"ListItem","position":2,"name":"Reedmark Advisors","item":"https://www.solenture.com/reedmark-advisors/"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" aria-label="Solenture home"><img class="nav-logo-img" id="navLogo" src="/images/Solenture_Logo.svg" alt="Solenture" style="height:65px;cursor:pointer;"></a>
+    <div class="nav-links">
+      <a href="/about/" data-p="about">About</a>
+      <div class="nav-item-drop">
+        <div class="nav-drop-trigger" data-p-group="consulting,total-rewards,wealth">What We Do <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="nav-dropdown">
+          <a href="/consulting/" data-p="consulting">Consulting</a>
+          <a href="/total-rewards/" data-p="total-rewards">Total Rewards</a>
+          <a href="/wealth-management/" data-p="wealth">Wealth Management</a>
+        </div>
+      </div>
+      <a href="/team/" data-p="team">Team</a>
+      <a href="/contact/" class="nav-cta" data-p="contact">Get In Touch</a>
+    </div>
+    <div class="hamburger" id="ham" onclick="toggleMob()"><span></span></div>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mob">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--mid-gray);margin-top:8px">What We Do</div>
+  <a href="/consulting/" style="font-size:22px">Consulting</a>
+  <a href="/total-rewards/" style="font-size:22px">Total Rewards</a>
+  <a href="/wealth-management/" style="font-size:22px">Wealth Management</a>
+  <a href="/team/">Team</a>
+  <a href="/contact/">Contact</a>
+</div>
+
+<div class="page active" id="page-reedmark">
+  <section class="s" style="padding-top:180px;min-height:80vh;display:flex;align-items:center">
+    <div class="s-inner" style="max-width:680px">
+      <h1 class="sr-only">Reedmark Advisors, LLC</h1>
+      <img src="/images/reedmark_logo.png" alt="Reedmark Advisors, LLC — A Solenture Company" style="height:60px;width:auto;display:block;margin-bottom:8px">
+      <div class="s-rule"></div>
+      <p class="s-desc" style="max-width:none">Reedmark Advisors, LLC is an SEC-registered investment advisory firm. In 2024, Reedmark became a wholly-owned subsidiary of Solenture, LLC &mdash; every Reedmark advisor is a Solenture W-2 employee, so clients get one integrated team rather than two separate firms to coordinate with.</p>
+      <p class="s-desc" style="max-width:none;margin-top:16px">Reedmark provides two core services: qualified retirement plan consulting, and personal wealth &amp; investment advisory.</p>
+      <p style="margin-top:36px"><a class="btn-primary" href="/Reedmark_Advisors_Overview.pdf" target="_blank" rel="noopener" style="display:inline-flex">View the Reedmark Advisors Overview &rarr;</a></p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><img src="/images/Solenture_Logo.svg" alt="Solenture" style="height:65px;margin-bottom:12px;filter:brightness(0) invert(1);opacity:0.9;"><p class="footer-tagline">Guiding privately-held businesses to maximize value and converting that value into personal private wealth since 1965.</p>
+	  <a class="footer-social" href="https://www.linkedin.com/company/solenturellc" target="_blank" rel="noopener" aria-label="Solenture on LinkedIn">
+  		<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+	  </a>
+	  </div>
+      <div class="footer-col"><h5>Services</h5><a href="/consulting/">Business Consulting</a><a href="/Business_Transition_Overview.pdf" target="_blank">Business Transition</a><a href="/consulting/">Exit &amp; Transition Planning</a><a href="/total-rewards/">Total Rewards</a><a href="/total-rewards/">C-Suite&reg; Executive Office</a><a href="/wealth-management/">Wealth Management</a><a href="/wealth-management/">Executive Family Office</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="/about/">Our History</a><a href="/team/">Our Team</a><a href="/contact/">Contact</a><a href="/reedmark-advisors/">Reedmark Advisors, LLC</a></div>
+      <div class="footer-col"><h5>Contact</h5>
+		  <!-- Grouped Address (Brightens both lines on hover) -->
+		  <a class="footer-address" href="https://maps.app.goo.gl/ZhcYUkbAheGV8T44A" target="_blank" rel="noopener">
+			  <div>585 Epsilon Drive, Suite 200</div>
+			  <div>Pittsburgh, PA 15238</div>
+		  </a>
+		  <!-- Clickable Phone Numbers -->
+		  <a class="footer-link" href="tel:14122815472">412-281-5472</a>
+		  <a class="footer-link" href="tel:18008422252">1-800-842-2252</a>
+		  <!-- Properly Formatted & Clickable Email -->
+		  <a class="footer-link" href="mailto:info@solenture.com">info@solenture.com</a>
+	  </div>
+    </div>
+    <div class="footer-legal">
+      <p>Securities offered through Integrity Alliance, LLC, Member <a href="https://www.sipc.org/" target="_blank" rel="noopener">SIPC</a>. Integrity Wealth is a marketing name for Integrity Alliance, LLC. Investment Advisory services offered through Reedmark Advisors, LLC. Reedmark Advisors, LLC is a wholly owned subsidiary of Solenture, LLC. Solenture, LLC and Reedmark Advisors, LLC are not affiliated with Integrity Wealth.</p>
+      <p style="margin-top:6px">Tax and Legal services are not offered through Integrity Wealth. This site is published for residents of the United States only. Representatives may only conduct business with residents of the states and jurisdictions in which they are properly registered. Therefore, a response to a request for information may be delayed until appropriate registration is obtained or exemption from registration is determined. Not all services referenced on this site are available in every state and through every advisor listed.</p>
+      <p style="margin-top:6px">Check the background of this firm on <a href="https://brokercheck.finra.org/" target="_blank" rel="noopener">FINRA's BrokerCheck</a></p>
+      <p style="margin-top:6px">The Form ADV2A, Form CRS, and Privacy Policy linked below are for Reedmark Advisors, LLC, which is Solenture, LLC's wholly owned registered investment adviser.</p> 
+	  <p style="margin-top:6px"><a href="/20260312_ADV_Part_2A.pdf" target="_blank" rel="noopener">Reedmark Advisors, LLC Form ADV2A</a> &nbsp;|&nbsp; <a href="/20260205_formcrs_173760_reedmark_advisors_llc.pdf" target="_blank" rel="noopener">Reedmark Advisors, LLC Form CRS</a> &nbsp;|&nbsp; <a href="/Privacy_Policy_2026.pdf" target="_blank" rel="noopener">Reedmark Advisors, LLC Privacy Policy</a></p> 
+	</div>
+    <div class="footer-bottom"><span>&copy; 2026 Solenture, LLC. All rights reserved.</span><span><a href="/privacy-policy/" style="color:rgba(255,255,255,0.25)">Privacy Policy</a></span></div>
+  </div>
+</footer>
+
+<script>
+const bios=[
+{n:"Steven C. Price",r:"CEO / Member",img:"images/steve-profile-pic.jpg",bio:"<p>Steve joined Solenture in 1984 and began the process of transforming the firm into a \u201cSolutions Venture.\u201d Central to Solenture\u2019s approach is the ability to understand each client\u2019s unique goals and objectives and develop solutions to meet their specific needs.</p><p>Over the years, Steve has pioneered the development of various programs extending to executive benefits plans, succession planning, C-Suite\u00ae services and total rewards, strategic planning, management compensation and communications, wealth transfer, and exit planning.</p><p>Steve has been quoted in and has authored articles for Barron\u2019s, Business Week, CFO Magazine, Directorship, Journal of Compensation and Benefits, Journal of Deferred Compensation, and various national and local publications.</p>"},
+{n:"Michael L. DiIanni",r:"COO / Member",img:"images/michael-profile-pic__1_.jpg",bio:"<p>Michael joined Solenture in 2015 as Senior Managing Director of Strategic Ventures. Prior to joining Solenture, his career focused on innovative development and large-scale transformations in Fortune 500 companies and privately-held entities.</p><p>As Chief Operating Officer, Michael oversees the day-to-day management of the firm while serving as a driving force behind client communications. He has held leadership roles across finance, shared services, supply chain, human resources, and project management.</p><p>Michael has been responsible for the development and execution of global strategy to maximize short and long-term firm-wide value at organizations including Dominion Resources, Peoples Natural Gas Company LLC, and UPMC.</p>"},
+{n:"Vincent E. Zullo",r:"Executive VP / Member",img:"images/vince-2.jpg",bio:"<p>Vincent joined Solenture in 2008, centering his practice on family security, business transition planning, asset management, and estate and wealth transfer planning.</p><p>From 2015 through 2022, Vincent also served as President and CFO of his family\u2019s business, Audio Energy. The company experienced exponential growth, becoming the largest independently-owned micro-cell packaging and distributor worldwide with customers ranging from local distributors to Fortune 100 box stores.</p><p>Vincent brings over 25 years of financial services experience combined with hands-on operating leadership, a rare combination that makes him uniquely skilled at advising business-owning families.</p>"},
+{n:"Anthony J. Pascazio",r:"Executive VP / Member | Founder, Reedmark Advisors, LLC",img:"images/cropped-resized-Pascazio_Tony_431--36743-Retouched__1_.jpg",bio:"<p>Tony is the founder of Reedmark Advisors, LLC and leads the firm\u2019s retirement plan practice. He holds the CLU designation from The American College and the AIF designation from the University of Pittsburgh\u2019s Katz School of Business.</p><p>With a 45+ year career in the retirement plan business, Tony is one of a small number of consultants who began designing retirement plans in the pre-ERISA era. His commitment to the industry has earned him recognition as one of the nation\u2019s leading voices on retirement plan design.</p><p>Tony has spoken extensively on topics ranging from the effectiveness of 401(k) plans as retirement vehicles to the rebirth of traditional pension plans. His reputation, experience, and network are cornerstones of Solenture\u2019s current and future growth.</p>"}
+];
+
+
+function toggleMob(){
+  document.getElementById("ham").classList.toggle("open");
+  var m=document.getElementById("mob");
+  m.classList.toggle("visible");
+  document.body.style.overflow=m.classList.contains("visible")?"hidden":"";
+}
+
+window.addEventListener("scroll",function(){
+  document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>20);
+});
+
+function initRv(){
+  var o=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add("vis");}
+    });
+  },{threshold:0.1,rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".rv:not(.vis)").forEach(function(el){o.observe(el)});document.querySelectorAll(".s-rule:not(.vis)").forEach(function(el){o.observe(el)});
+}
+initRv();
+
+function initCounters(){
+  document.querySelectorAll(".h-stat-num[data-t]").forEach(function(c){
+    var t=parseInt(c.dataset.t);
+    var s=c.dataset.s||"";
+    var cur=0;
+    var d=1800;
+    var step=t/(d/16);
+    function up(){
+      cur+=step;
+      if(cur>=t){c.textContent=t+s;c.classList.add('counted');return;}
+      c.textContent=Math.floor(cur)+s;
+      requestAnimationFrame(up);
+    }
+    var obs=new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){up();obs.disconnect();}
+    });
+    obs.observe(c);
+  });
+}
+initCounters();
+
+function showTab(id,btn){
+  document.querySelectorAll(".tab-content").forEach(function(t){t.classList.remove("active")});
+  document.querySelectorAll(".tab-btn").forEach(function(b){b.classList.remove("active")});
+  document.getElementById(id).classList.add("active");
+  btn.classList.add("active");
+  setTimeout(initRv,50);
+}
+
+function openBio(i){
+  var b=bios[i];
+  document.getElementById("mImg").src=b.img;
+  document.getElementById("mImg").alt=b.n;
+  document.getElementById("mName").textContent=b.n;
+  document.getElementById("mRole").textContent=b.r;
+  document.getElementById("mBio").innerHTML=b.bio;
+  document.getElementById("bioModal").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+
+function closeBio(e){
+  var modal=document.getElementById("bioModal");
+  if(!modal) return;
+  if(e&&e.target!==modal&&!e.target.classList.contains("modal-close")) return;
+  document.getElementById("bioModal").classList.remove("open");
+  document.body.style.overflow="";
+}
+
+document.addEventListener("keydown",function(e){if(e.key==="Escape") closeBio();});
+
+function updateScore(){
+  var total=10;
+  var checked=document.querySelectorAll('.assessment-q input:checked').length;
+  var box=document.getElementById('scoreBox');
+  var fill=document.getElementById('scoreFill');
+  var title=document.getElementById('scoreTitle');
+  var text=document.getElementById('scoreText');
+  if(checked===0){box.style.display='none';return;}
+  box.style.display='block';
+  var pct=Math.round((checked/total)*100);
+  fill.style.width=pct+'%';
+  if(checked<=2){
+    title.textContent='Early Stage ('+checked+' of 10)';
+    text.textContent='There are significant gaps to address before pursuing a transaction. The good news: early planning creates the most value. Now is exactly the right time to engage Solenture.';
+  } else if(checked<=5){
+    title.textContent='Progressing ('+checked+' of 10)';
+    text.textContent='You have a foundation in place but key areas need attention before a transaction will yield optimal results. Solenture can help identify and close the remaining gaps.';
+  } else if(checked<=8){
+    title.textContent='Strong Readiness ('+checked+' of 10)';
+    text.textContent='Your business is well-positioned for a transition. A focused engagement with Solenture can help optimize the remaining factors and ensure the process itself delivers the outcome you deserve.';
+  } else {
+    title.textContent='High Readiness ('+checked+' of 10)';
+    text.textContent='You have done exceptional preparation. The question now is execution. Solenture can help ensure the transaction process and post-sale wealth plan fully capitalize on your position.';
+  }
+}
+
+</script>
+<script>
+(function () {
+  var GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/zFxr3nEXshQGcRq3Zlpd/webhook-trigger/01b6ed1b-1bdf-46ae-9e8e-53673c1cb903';
+  var ATTR = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid'];
+  var BASE = ['first_name','last_name','email','phone','company','interest','stage','message'];
+
+  // Persist attribution from the landing URL for the whole session
+  try {
+    var qs = new URLSearchParams(location.search);
+    ATTR.forEach(function (k) { if (qs.get(k)) sessionStorage.setItem('sol_' + k, qs.get(k)); });
+    if (!sessionStorage.getItem('sol_referrer')) {
+      sessionStorage.setItem('sol_referrer', document.referrer || 'direct');
+    }
+  } catch (e) {}
+
+  function activePage() {
+    var el = document.querySelector('.page.active');
+    return el ? el.id.replace('page-', '') : 'unknown';
+  }
+
+  function payloadFrom(form) {
+    var data = {};
+    new FormData(form).forEach(function (v, k) {
+      if (k.charAt(0) === '_' || k === 'website') return;
+      data[k] = typeof v === 'string' ? v.trim() : v;
+    });
+    // Always send a constant payload shape or GHL field mapping breaks
+    BASE.forEach(function (k) { if (!(k in data)) data[k] = ''; });
+    data.form_name    = form.getAttribute('data-ghl');
+    data.source_page  = activePage();
+    data.page_url     = location.href;
+    data.submitted_at = new Date().toISOString();
+    try {
+      ATTR.forEach(function (k) { data[k] = sessionStorage.getItem('sol_' + k) || ''; });
+      data.referrer = sessionStorage.getItem('sol_referrer') || '';
+    } catch (e) {
+      ATTR.forEach(function (k) { data[k] = ''; });
+      data.referrer = '';
+    }
+    return data;
+  }
+
+  function thanks(form) {
+    form.innerHTML = '<div class="form-thanks"><h3>Thank you.</h3>' +
+      '<p>Your message has been received. A member of our team will follow up shortly.</p></div>';
+  }
+
+  function send(data) {
+    return fetch(GHL_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return 'cors';
+    }).catch(function () {
+      // CORS-blocked. Fire opaque request; GHL still receives it.
+      return fetch(GHL_WEBHOOK, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(data)
+      }).then(function () { return 'no-cors'; });
+    });
+  }
+
+  document.querySelectorAll('form[data-ghl]').forEach(function (form) {
+    var hp = document.createElement('input');
+    hp.type = 'text';
+    hp.name = 'website';
+    hp.tabIndex = -1;
+    hp.setAttribute('autocomplete', 'off');
+    hp.setAttribute('aria-hidden', 'true');
+    hp.style.cssText = 'position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0';
+    form.appendChild(hp);
+    form.setAttribute('data-t0', Date.now());
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.getAttribute('data-sending') === '1') return;
+
+      // Honeypot filled, or submitted implausibly fast: drop silently
+      if (hp.value !== '' || (Date.now() - Number(form.getAttribute('data-t0'))) < 2500) {
+        thanks(form);
+        return;
+      }
+
+      var btn = form.querySelector('button[type="submit"]');
+      var label = btn ? btn.textContent : '';
+      form.setAttribute('data-sending', '1');
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+
+      var data = payloadFrom(form);
+
+      send(data).then(function (mode) {
+        console.log('[solenture] lead sent via ' + mode, data);
+        thanks(form);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'generate_lead',
+          form_name: data.form_name,
+          source_page: data.source_page,
+          interest: data.interest || ''
+        });
+      }).catch(function () {
+        form.setAttribute('data-sending', '0');
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+        var err = form.querySelector('.form-error');
+        if (!err) {
+          err = document.createElement('div');
+          err.className = 'form-error';
+          form.appendChild(err);
+        }
+        err.textContent = 'Something went wrong sending your message. Please call 412-281-5472 or email info@solenture.com.';
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
