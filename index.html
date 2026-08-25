@@ -521,6 +521,10 @@ html{overflow-x:hidden}
   .partners-logos img{height:36px;max-width:40vw;object-fit:contain}
   footer{padding:72px 24px 40px}
 }
+	.form-thanks{padding:32px 0}
+.form-thanks h3{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--navy);margin-bottom:10px}
+.form-thanks p{font-size:15px;line-height:1.7;color:var(--dark-gray);font-weight:300}
+.form-error{margin-top:14px;font-size:13px;line-height:1.6;color:#B3261E}
 </style>
 </head>
 <body>
@@ -689,7 +693,7 @@ html{overflow-x:hidden}
         </div>
       </div>
       <div class="rv rv-d2">
-        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST" data-ghl="home-cta">
           <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="box">
@@ -798,7 +802,7 @@ html{overflow-x:hidden}
         </div>
       </div>
       <div class="rv rv-d2">
-        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST" data-ghl="about-cta">
           <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="box">
@@ -947,7 +951,7 @@ html{overflow-x:hidden}
         </div>
       </div>
       <div class="rv rv-d2">
-        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST" data-ghl="consulting-cta">
           <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="box">
@@ -1142,7 +1146,7 @@ html{overflow-x:hidden}
         </div>
       </div>
       <div class="rv rv-d2">
-        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST" data-ghl="total-rewards-cta">
           <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="box">
@@ -1276,7 +1280,7 @@ html{overflow-x:hidden}
         </div>
       </div>
       <div class="rv rv-d2">
-        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST" data-ghl="wealth-cta">
           <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="box">
@@ -1547,7 +1551,7 @@ html{overflow-x:hidden}
         </div>
       </div>
       <div class="rv rv-d2">
-        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST" data-ghl="brokerage-inquiry">
           <input type="hidden" name="_subject" value="Business Brokerage Inquiry &mdash; Solenture.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="box">
@@ -1641,7 +1645,7 @@ html{overflow-x:hidden}
         </div>
       </div>
       <div class="rv rv-d2">
-        <form action="https://formsubmit.co/info@solenture.com" method="POST">
+        <form action="https://formsubmit.co/info@solenture.com" method="POST" data-ghl="team-cta">
           <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="box">
@@ -1689,7 +1693,7 @@ html{overflow-x:hidden}
     <div class="contact-right">
       <h3>Send us a message</h3>
       <p>We&rsquo;ll respond within one business day.</p>
-      <form action="https://formsubmit.co/info@solenture.com" method="POST">
+      <form action="https://formsubmit.co/info@solenture.com" method="POST" data-ghl="contact-page">
         <input type="hidden" name="_subject" value="New Inquiry — Solenture.com">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="box">
@@ -2146,6 +2150,124 @@ function updateScore(){
 }
 
 </script>
+<script>
+(function () {
+  var GHL_WEBHOOK = 'https://services.leadconnectorhq.com/hooks/zFxr3nEXshQGcRq3Zlpd/webhook-trigger/01b6ed1b-1bdf-46ae-9e8e-53673c1cb903';
+  var ATTR = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid'];
+  var BASE = ['first_name','last_name','email','phone','company','interest','stage','message'];
 
+  // Persist attribution from the landing URL for the whole session
+  try {
+    var qs = new URLSearchParams(location.search);
+    ATTR.forEach(function (k) { if (qs.get(k)) sessionStorage.setItem('sol_' + k, qs.get(k)); });
+    if (!sessionStorage.getItem('sol_referrer')) {
+      sessionStorage.setItem('sol_referrer', document.referrer || 'direct');
+    }
+  } catch (e) {}
+
+  function activePage() {
+    var el = document.querySelector('.page.active');
+    return el ? el.id.replace('page-', '') : 'unknown';
+  }
+
+  function payloadFrom(form) {
+    var data = {};
+    new FormData(form).forEach(function (v, k) {
+      if (k.charAt(0) === '_' || k === 'website') return;
+      data[k] = typeof v === 'string' ? v.trim() : v;
+    });
+    // Always send a constant payload shape or GHL field mapping breaks
+    BASE.forEach(function (k) { if (!(k in data)) data[k] = ''; });
+    data.form_name    = form.getAttribute('data-ghl');
+    data.source_page  = activePage();
+    data.page_url     = location.href;
+    data.submitted_at = new Date().toISOString();
+    try {
+      ATTR.forEach(function (k) { data[k] = sessionStorage.getItem('sol_' + k) || ''; });
+      data.referrer = sessionStorage.getItem('sol_referrer') || '';
+    } catch (e) {
+      ATTR.forEach(function (k) { data[k] = ''; });
+      data.referrer = '';
+    }
+    return data;
+  }
+
+  function thanks(form) {
+    form.innerHTML = '<div class="form-thanks"><h3>Thank you.</h3>' +
+      '<p>Your message has been received. A member of our team will follow up shortly.</p></div>';
+  }
+
+  function send(data) {
+    return fetch(GHL_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return 'cors';
+    }).catch(function () {
+      // CORS-blocked. Fire opaque request; GHL still receives it.
+      return fetch(GHL_WEBHOOK, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(data)
+      }).then(function () { return 'no-cors'; });
+    });
+  }
+
+  document.querySelectorAll('form[data-ghl]').forEach(function (form) {
+    var hp = document.createElement('input');
+    hp.type = 'text';
+    hp.name = 'website';
+    hp.tabIndex = -1;
+    hp.setAttribute('autocomplete', 'off');
+    hp.setAttribute('aria-hidden', 'true');
+    hp.style.cssText = 'position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0';
+    form.appendChild(hp);
+    form.setAttribute('data-t0', Date.now());
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.getAttribute('data-sending') === '1') return;
+
+      // Honeypot filled, or submitted implausibly fast: drop silently
+      if (hp.value !== '' || (Date.now() - Number(form.getAttribute('data-t0'))) < 2500) {
+        thanks(form);
+        return;
+      }
+
+      var btn = form.querySelector('button[type="submit"]');
+      var label = btn ? btn.textContent : '';
+      form.setAttribute('data-sending', '1');
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+
+      var data = payloadFrom(form);
+
+      send(data).then(function (mode) {
+        console.log('[solenture] lead sent via ' + mode, data);
+        thanks(form);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'generate_lead',
+          form_name: data.form_name,
+          source_page: data.source_page,
+          interest: data.interest || ''
+        });
+      }).catch(function () {
+        form.setAttribute('data-sending', '0');
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+        var err = form.querySelector('.form-error');
+        if (!err) {
+          err = document.createElement('div');
+          err.className = 'form-error';
+          form.appendChild(err);
+        }
+        err.textContent = 'Something went wrong sending your message. Please call 412-281-5472 or email info@solenture.com.';
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
